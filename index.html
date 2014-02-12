@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Progressive Meter Reader</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+  <style>
+	
+	body {
+    background:url(resources/bally_logo.jpg);
+    background-size:200px 200px;
+	background-repeat: no-repeat;
+
+}
+	
+	
+	h1.sansserif {
+		text-align:center;
+		font-family:Helvetica,sans-serif;
+		font-size:500%;
+		}
+	h2.sansserif {
+		text-align:center;
+		font-family:Helvetica,sans-serif;
+		font-size:150%;
+	}
+	
+	h3.sansserif {
+		font-family:Helvetica,sans-serif;
+		font-size:125%;
+	}
+	
+	img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+	}
+	
+	p.figure {
+		font-weight:bold;
+		font-size:80%;
+		text-align:center;
+	}
+	  
+	#tabs .ui-tabs-nav { 
+    height: 2.35em; 
+    text-align: center; 
+	}
+	 
+	#tabs .ui-tabs-nav li { 
+    display: inline-block; 
+    float: none; 
+    top: 0px; 
+    margin: 0em; 
+    
+    
+}
+</style>
+</head>
+
+<body>
+<div id="header">
+<h1 class="sansserif">
+Progressive Meter Reader</h1>
+<h2 class="sansserif">CS426: Senior Projects in Computer Science, Spring 2014<br>
+Department of Computer Science & Engineering<br>
+University of Nevada, Reno<br>
+Sponsored by Bally Technologies</h2>
+</div>
+ 
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Concept</a></li>
+    <li><a href="#tabs-2">The Team</a></li>
+    <li><a href="#tabs-3">Resources</a></li>
+    
+
+  </ul>
+  <div id="tabs-1">
+<h3>Overview</h3>
+<p>
+Currently, casino technicians must periodically check each machine individually to track the progressive meter of every game. These statistics are kept on record so that these technicians can monitor large jackpots and recover from potential power outages or other system failures. Automating this task not only allows for a significantly more up-to-date record of progressive jackpots, but also enables the technician to perform more meaningful data analysis.<br><br>
+
+The PMR will be comprised of three components: a client application, a server application, and a user interface. The client application is most closely tied to the hardware in the field, and will be responsible for gathering live video feed directly from a progressive meter with current jackpot values. Numeric recognition is performed on a still snapshot of this video feed. The server application will then receive this image of the progressive meter and follow the numeric recognition algorithm within the region of interest. The client and server backend information is then sent to the user interface where the data is organized for the technicians’ use. Games will be listed along with their most recent meter value, and options will be available for the user to update the value of the meter for any game or to correct mistakes the algorithm may have made. Meter history information and other analytical tools will further allow the user to gain a greater understanding of the incoming data.<br><br>
+</p>  
+<h3>The Interface</h3>
+
+<img class="center" src="resources/ui_mockup.png" align="center" height=476 width=800>
+<p class="figure">Figure 1: The PMR UI main page</p>
+<p>
+The user interface client will resemble the mockup shown in figure 1. This primary screen gives the user a broad view of several machines' pertinent values, as well as their approximate location within the casino. Options are available for the user to get current progressive meter values and see a more complete detailing of any given machine.
+</p><br>
+
+<img class="center" src="resources/verification.png" align="center" height=476 width=800>
+<p class="figure">Figure 2: The PMR verification screen</p>
+<p>
+A larger, up-to-date sample of the given game's progressive meter is shown on the verification page. The user will have the option to modify the region of numerical recognition, while also being able to aid in the machine learning process through manual output corrections.
+</p><br>
+
+<h3>The Algorithm</h3>
+<img class="center" src="resources/hotrocks_progressive.png" align="center" height=476 width=800>
+<p class="figure">Figure 3: A game's progressive meter</p>
+<p>
+Input as depicted in figure 3 will be sent from the slot machine client to the server application for optical character recognition. This image will be thresholded and standardized to ensure the algorithm's best performance.
+</p><br>
+
+<img class="center" src="resources/hotrocks_region.png" align="center" height=150 width=500>
+<p class="figure">Figure 4: Meter area of interest</p>
+<p>
+The coordinates of the region of interest will be provided by the user to yield nothing but the relevant number as in figure 4. Each digit (contour) found within this image is individually recognized using its moment as compared to each digit's validation set. The digit with the closest match is then returned to build the meter's value. This generated value is finally sent to the user interface for the technician's use.
+</p><br>
+
+
+</div>
+  <div id="tabs-2">
+	<p><h3 class="sansserif">Team 16 Members:</h2><br>
+	
+	Steven Albers<br>
+	stevenalbers@gmail.com<br><br>
+	
+	Andrey Gaganov<br>
+	dayvenkirq@hotmail.com<br><br>
+	
+	Nick Little<br>
+	nickalittle@gmail.com<br><br>
+	
+	<h3 class="sansserif">Course Instructor:</h3><br>
+	Dr. Sergiu Dascalu, University of Nevada, Reno<br>
+	dascalus@cse.unr.edu<br><br>
+	
+	<h3 class="sansserif">External Advisors:</h3><br>
+	Mr. Dat Ta, Bally Technologies<br>
+	dta@ballytech.com<br><br>
+	
+	Dr. George Bebis, University of Nevada, Reno<br>
+	bebis@cse.unr.edu
+	
+	</p>
+  </div>
+  <div id="tabs-3">
+	<h3>Problem-domain book:</h3><br>
+	<a href="http://books.google.com/books/about/Pattern_classification.html?id=YoxQAAAAMAAJ" target="blank">R. O. Duda, P. E. Hart, and D. G. Stork, Pattern Classification, 2nd edition, Wiley-Interscience.</a><br><br>
+	
+	<h3>Relevant Research:</h3><br>
+	
+    <li>Kahan, S., Pavlidis, T., Baird, H. S. <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=4767901&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4767901" target="blank">“On the Recognition of Printed Characters of Any Font and Size.”</a> March 1987. IEEE Transactions On Pattern Analysis And Machine Intelligence, Vol. PAMI-9, No. 2.</li><br>
+    
+    <li>
+    Rahman, A.F.R., Fairhurst, M.C. <a href="http://www.sciencedirect.com/science/article/pii/S0262885698000560" target="blank">“Machine-printed character recognition revisited: re-application of recent advances in handwritten character recognition research.”</a> November 1997. Image and Vision Computing 16, pp. 819–842. 1998. Electronic Engineering Laboratories, University of Kent, Canterbury, Kent CT2 7NT, UK
+    </li><br>
+    
+    <li>
+    Islam, M.R.; Toufiq, R.; Rahman, M.F., <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6471469" target="blank">"Appearance and shape based facial recognition system using PCA and HMM."</a> Electrical & Computer Engineering (ICECE), 2012 7th International Conference on , vol., no., pp.1,4, 20-22 Dec. 2012
+
+    </li><br>
+    
+    <li>
+        Chao-Ho Chen; Tsong-Yi Chen; Chi-Ming Huang; Da-Jinn Wang, <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6079596&url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel5%2F6079160%2F6079486%2F06079596.pdf%3Farnumber%3D6079596" target="blank">"License Plate Location for Vehicles Passing through a Gate,"</a> Intelligent Information Hiding and Multimedia Signal Processing (IIH-MSP), 2011 Seventh International Conference on , vol., no., pp.340,343, 14-16 Oct. 2011
+
+    </li><br>
+  </div>
+</div>
+ 
+ 
+</body>
+</html>
