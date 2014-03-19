@@ -25,7 +25,7 @@ struct POINT {
    float x, y;
    int checked, removed;
 };
-
+ 
 // ===================================================================
 void classify(std::string , vector<vector<Point> >,
 		vector<Vec4i> , float [][charsToClassify], char );
