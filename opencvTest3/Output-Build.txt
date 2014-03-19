@@ -1,0 +1,20 @@
+﻿1>------ Rebuild All started: Project: opencvTest3, Configuration: Debug Win32 ------
+1>  main.cpp
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(255): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(256): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(259): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(494): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(495): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(497): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(498): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(525): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(526): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(528): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(529): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(577): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(578): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(588): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(589): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(712): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+1>  opencvTest3.vcxproj -> C:\Users\Andrey\Documents\Visual Studio 2012\Projects\opencvTest3\Debug\opencvTest3.exe
+========== Rebuild All: 1 succeeded, 0 failed, 0 skipped ==========
