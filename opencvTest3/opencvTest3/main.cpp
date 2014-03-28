@@ -11,12 +11,15 @@ using namespace std;
 
 int thresh = 245;
 const int charsToClassify = 11; // 0-9 digits + $ sign
+float ctrd[2] = {0.0, 0.0};
 RNG rng(12345);
 
+// ===================================================================
+
 // temp arrays placed here because of an issue with passing its pointers:
-const int numMoments = 5;
+const int numMoments = 6;
 float myMoments[numMoments];
-const int numFeatures = 4;
+const int numFeatures = 5;
 float features[numFeatures];
 float moment1 = 0;
 
@@ -71,11 +74,16 @@ int main()
 	// ========== all moments are now in database ===========
     // ============== process the test image: ===============
 
-	Mat image = imread("../src/testImg.jpg", 1); // converts image from one color space to another
+	Mat image = imread("../src/in.jpg", 1); // converts image from one color space to another
 	cvtColor(image, imageGray, COLOR_BGR2GRAY );
+	imshow("greyscale", imageGray);
+	imwrite( "../src/out0-greyscale.png" , imageGray); // saves the chosen output image
 	//threshNick("../src/cd.jpg");	- probably old code
 	//customThresh1D(imageGray);	- not necessary
-	threshold(imageGray, imageGray, thresh, 255, THRESH_BINARY);
+	threshold(imageGray, imageGray, 50, 255, THRESH_BINARY);
+	imshow("thresh", imageGray);
+	imwrite( "../src/out1-thresh.png" , imageGray); // saves the chosen output image
+	//dilate(imageGray, imageGray, Mat(), Point(-1,-1), 2); // use only for LED-style fonts
 	//Size_<int> qm;
 	//resize(image, image, qm, 0.0, 0.0, INTER_CUBIC);
 
@@ -83,6 +91,7 @@ int main()
 	// ============ finished emphasizing numbers on the test image ============
 	// ============ seeking dollar signs: ============
 
+	/*
 	for(int j=0; j < image.size().height; j++)
 	{
 		for(int i=0; i < image.size().width; i++)
@@ -95,10 +104,14 @@ int main()
 			}
 		}
 	}
+	*/
 
 	// recognition based on Euclidean distances starts here:
 	cout << "\nNumber of moments: " << numMoments << "\n\n";
+
+	// !!!
 	detectNextAndMatch(imageGray, fDatabase); // needs an isDollarSign flag for further detection.
+
 	// goToNextChar(); 
 	//  - traverse top half of contour
 	//    = store top, bottom, and right pixels
@@ -107,7 +120,7 @@ int main()
 	// ====================== done ========================
 	//shows the image with colored contours
 	imshow("Output", imageGray);
-	imwrite( "../src/out.png" , imageGray); // saves the chosen output image
+	imwrite( "../src/out2-dilation.png" , imageGray); // saves the chosen output image
 	cout << "Done.\n";
 	waitKey(0);
 	return 0;
@@ -160,17 +173,18 @@ void classify(std::string imageFile,
 	}
 	cout << endl;
 
-	// writing moments into the 2D-array ("database"):
-	/* for (int i=0; i < numMoments; i++)
+	// ------------------------------------------------------------------------
+	/*
+	cout << endl;
+	if (whichChar == '9')
 	{
-		cout << "Moment " << i << ": " << myMoments[i] << "\n";
-		// digits:
-		if ( whichChar >= 48 && whichChar <= 57 )
-			fDatabase[i][ int(whichChar) - 48 ] = myMoments[i];
-		// dollar sign:
-		else fDatabase[i][ charsToClassify - 1 ] = myMoments[i];
+		for (int i=0; i < numPoints-1; i++)
+		{
+			cout << pow( pow(abs(arrayPoints[i].x - ctrd[0]),2.0) + pow(abs(arrayPoints[i].y - ctrd[1]),2.0) , 0.5) << endl;
+		}
 	}
-	cout << endl; */
+	*/
+	// ------------------------------------------------------------------------
 
 	delete[] arrayPoints;
 }
@@ -243,12 +257,13 @@ void Sequential_moments(int no_points, POINT * P)
 		
 		// compute the feature vectore for this char:
 		//cout << "Now: " << myMoments[1] << endl << endl;
-		features[0] = pow( abs(myMoments[1]), 0.5 ) / abs(moment1);
+		features[0] = pow( abs(myMoments[1]), 0.5 ) / (moment1);
 		//cout << "features[0]: " << features[0] << endl;
-		features[1] = abs(myMoments[2]) / pow( abs(myMoments[1]), 1.5 );
-		features[2] = abs(myMoments[3]) / pow( abs(myMoments[1]), 2.0 );
+		features[1] = (myMoments[2]) / pow( abs(myMoments[1]), 1.5 );
+		features[2] = (myMoments[3]) / pow( abs(myMoments[1]), 2.0 );
 		// features[3] = F4 = M'5 = M5/(M2^(5/2)):
-		features[3] = abs(myMoments[4]) / pow( abs(myMoments[1]), 2.5 );
+		features[3] = (myMoments[4]) / pow( abs(myMoments[1]), 2.5 );
+		features[4] = (myMoments[5]) / pow( abs(myMoments[1]), 3.0 );
 
 		delete[] S;
 		delete[] M;
@@ -295,6 +310,9 @@ void centroid(int size, POINT * P, float * cgx, float * cgy)
   }
   *cgx=(float)(Sumx/Summ);
   *cgy=(float)(Sumy/Summ);
+
+  ctrd[0] = *cgx;
+  ctrd[1] = *cgy;
 }
 
 // ===============================================================
@@ -352,6 +370,7 @@ int computeNumContourPts(Mat imgGrayComp, bool testFlag)
 	dirs[5][0] = 0; dirs[5][1] = 1;
 	dirs[6][0] = -1; dirs[6][1] = 1;
 	dirs[7][0] = -1; dirs[7][1] = 0;
+
 
 	// ======= to prevent from getting stuck at white noise pixels of contour: =======
 	if(testFlag == 0)
@@ -704,6 +723,16 @@ bool detectNextAndMatch(Mat imgDtct, float fDatabase[][charsToClassify])
 	// 0 1 2 3 4 5 6 7 $;
 	// 0 1 2 3 4 5 6 7 8;
 
+	// ------------------------------------------------------------------------
+	/*
+	cout << endl;
+	for (int i=0; i < numPoints-1; i++)
+	{
+		cout << pow( pow(abs(arrayPoints[i].x - ctrd[0]),2.0) + pow(abs(arrayPoints[i].y - ctrd[1]),2.0) , 0.5) << endl;
+	}
+	*/
+	// ------------------------------------------------------------------------
+
 	delete[] arrayPoints; // release memory before returning (with or without a value).
 
 	// print the recognized character:
@@ -744,7 +773,7 @@ void threshNick(string name)
 
 	imshow("Original Image", image);	
 
-	dilate(image, image, Mat(), Point(-1,-1), 1);
+	//dilate(image, image, Mat(), Point(-1,-1), 1);
 	cvtColor(image, imageGray, CV_BGR2GRAY);
 
 	cout << image.rows<<endl;
