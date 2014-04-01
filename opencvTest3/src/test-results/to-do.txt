@@ -1,0 +1,2 @@
+1) Object-by-object detection
+2) Do LED

@@ -9,42 +9,46 @@
 using namespace cv;
 using namespace std;
 
-int thresh = 245;
+int gameChoice = 0; // no game chosen
+int thresh = 50;
 const int charsToClassify = 11; // 0-9 digits + $ sign
-float ctrd[2] = {0.0, 0.0};
+float ctrd[2] = {0.0, 0.0}; // for centroidal profiling
 RNG rng(12345);
 
 // ===================================================================
 
 // temp arrays placed here because of an issue with passing its pointers:
-const int numMoments = 6;
+const int numMoments = 11; //
 float myMoments[numMoments];
-const int numFeatures = 5;
+
+const int numFeatures = 10;
+// should be manually changed to quantity = numMoments-1 since it's a const.
+
 float features[numFeatures];
 float moment1 = 0;
 
 // ===================================================================
 struct POINT {
    float x, y;
-   int checked, removed;
 };
 
 // ===================================================================
-void classify(std::string , vector<vector<Point> >,
+void train(std::string , vector<vector<Point> >,
 		vector<Vec4i> , float [][charsToClassify], char );
 void Sequential_moments(int , POINT * );
 void Signature(int , POINT * , float * );
 void centroid(int , POINT * , float * , float * );
 float f_moment(float * , int , int );
 float f_central_moment(float * , int , int , float );
-int computeNumContourPts(Mat , bool );
-void writeContourCoords(Mat , POINT arrayPoints[], int );
+int computeNumContourPts(Mat , vector< vector<int> > & , bool );
+void writeContourCoords(Mat , POINT arrayPoints[], int , vector< vector<int> > & , bool );
 bool isInBounds(Mat imageForBounds, int , int );
-void customThresholding(Mat );
+//void customThresholding(Mat );
 void customThresh1D(Mat );
-bool detectNextAndMatch(Mat , float [][charsToClassify]);
-void threshNick(string );
+bool test(Mat , float [][charsToClassify]);
+//void threshNick(string );
 void smoothen(Mat img);
+void clearFlags(vector< vector<int> > & , Mat);
 
 // ===================================================================
 int main()
@@ -55,21 +59,40 @@ int main()
 	// an array to hold moments for every char class:
 	float fDatabase [numFeatures][charsToClassify]; // moments database
 	int i=0, x=0, y=0;
+	//
+	POINT j0tl;
+	j0tl.x = 195;
+	j0tl.y = 60;
+	POINT j0br;
+	j0br.x = 1164;
+	j0br.y = 218;
+	POINT j1tl;
+	j1tl.x = 100;
+	j1tl.y = 200;
+	POINT j2tl;
+	j2tl.x = 100;
+	j2tl.y = 200;
+	POINT j3tl;
+	j3tl.x = 100;
+	j3tl.y = 200;
+	POINT j4tl;
+	j4tl.x = 100;
+	j4tl.y = 200;
 
 	// ========= go thru every char to classify =========
 
 	cout << endl << endl << endl;
-	classify("../src/0.jpg", contour, hierarchy, fDatabase, '0');
-	classify("../src/1.jpg", contour, hierarchy, fDatabase, '1');
-	classify("../src/2.jpg", contour, hierarchy, fDatabase, '2');
-	classify("../src/3.jpg", contour, hierarchy, fDatabase, '3');
-	classify("../src/4.jpg", contour, hierarchy, fDatabase, '4');
-	classify("../src/5.jpg", contour, hierarchy, fDatabase, '5');
-	classify("../src/6.jpg", contour, hierarchy, fDatabase, '6');
-	classify("../src/7.jpg", contour, hierarchy, fDatabase, '7');
-	classify("../src/8.jpg", contour, hierarchy, fDatabase, '8');
-	classify("../src/9.jpg", contour, hierarchy, fDatabase, '9');
-	classify("../src/dollar.jpg", contour, hierarchy, fDatabase, '$');
+	train("../src/0.jpg", contour, hierarchy, fDatabase, '0');
+	train("../src/1.jpg", contour, hierarchy, fDatabase, '1');
+	train("../src/2.jpg", contour, hierarchy, fDatabase, '2');
+	train("../src/3.jpg", contour, hierarchy, fDatabase, '3');
+	train("../src/4.jpg", contour, hierarchy, fDatabase, '4');
+	train("../src/5.jpg", contour, hierarchy, fDatabase, '5');
+	train("../src/6.jpg", contour, hierarchy, fDatabase, '6');
+	train("../src/7.jpg", contour, hierarchy, fDatabase, '7');
+	train("../src/8.jpg", contour, hierarchy, fDatabase, '8');
+	train("../src/9.jpg", contour, hierarchy, fDatabase, '9');
+	train("../src/dollar.jpg", contour, hierarchy, fDatabase, '$');
 	
 	// ========== all moments are now in database ===========
     // ============== process the test image: ===============
@@ -78,15 +101,17 @@ int main()
 	cvtColor(image, imageGray, COLOR_BGR2GRAY );
 	imshow("greyscale", imageGray);
 	imwrite( "../src/out0-greyscale.png" , imageGray); // saves the chosen output image
-	//threshNick("../src/cd.jpg");	- probably old code
+	
 	//customThresh1D(imageGray);	- not necessary
-	threshold(imageGray, imageGray, 50, 255, THRESH_BINARY);
+
+	threshold(imageGray, imageGray, thresh, 255, THRESH_BINARY); // arg3 = threshold
 	imshow("thresh", imageGray);
 	imwrite( "../src/out1-thresh.png" , imageGray); // saves the chosen output image
+
 	//dilate(imageGray, imageGray, Mat(), Point(-1,-1), 2); // use only for LED-style fonts
+
 	//Size_<int> qm;
 	//resize(image, image, qm, 0.0, 0.0, INTER_CUBIC);
-
 
 	// ============ finished emphasizing numbers on the test image ============
 	// ============ seeking dollar signs: ============
@@ -106,21 +131,21 @@ int main()
 	}
 	*/
 
+	gameChoice = 1; // Cashburst
 	// recognition based on Euclidean distances starts here:
 	cout << "\nNumber of moments: " << numMoments << "\n\n";
-
-	// !!!
-	detectNextAndMatch(imageGray, fDatabase); // needs an isDollarSign flag for further detection.
+	test(imageGray, fDatabase); // needs an isDollarSign flag for further detection.
 
 	// goToNextChar(); 
 	//  - traverse top half of contour
 	//    = store top, bottom, and right pixels
 	//    = then detect next region
 
-	// ====================== done ========================
-	//shows the image with colored contours
-	imshow("Output", imageGray);
-	imwrite( "../src/out2-dilation.png" , imageGray); // saves the chosen output image
+	// ====================== end of main ========================
+	//shows the image with colored contours:
+	imshow("dilErd", imageGray);
+	imwrite( "../src/out2-dilErd.png" , imageGray); // saves the chosen output image
+	//cout << "\nHere 2\n"; // for debugging
 	cout << "Done.\n";
 	waitKey(0);
 	return 0;
@@ -129,16 +154,21 @@ int main()
 // ===================================================================
 // ===================================================================
 
-void classify(std::string imageFile, 
+void train(std::string imageFile, 
 		vector<vector<Point> > contour,
 		vector<Vec4i> hierarchy, float fDatabase [][charsToClassify],
 		char whichChar)
 {
 	cout << "Classifying " << whichChar << "\n";
-
+	
+	// ===============================================================================
 	POINT * arrayPoints; // for dynamic allocation
 	Mat image = imread(imageFile, 1);
 	Mat imageGrayClassify;
+	//
+	vector< vector<int> > imgPxlsFlags (image.size().height, vector<int>(image.size().width));
+	clearFlags(imgPxlsFlags, image); // clear after allocation
+	// ===============================================================================
 	
 	//! converts image from one color space to another
 	cvtColor(image, imageGrayClassify, COLOR_BGR2GRAY );
@@ -147,11 +177,13 @@ void classify(std::string imageFile,
 
 	// ======= time to find the 4 moments for the char: =======
 	// pre-compute no_points(size)(N):
-	int numPoints = computeNumContourPts(imageGrayClassify, 0);
+	int numPoints = computeNumContourPts(imageGrayClassify, imgPxlsFlags, 0); // might encounter inf-loop
+	clearFlags(imgPxlsFlags, image); // clear after allocation
 	arrayPoints = new POINT[numPoints]; // now that we know the "size"
 
 	// write the coords of every point into the points-array:
-	writeContourCoords(imageGrayClassify, arrayPoints, numPoints);
+	writeContourCoords(imageGrayClassify, arrayPoints, numPoints, imgPxlsFlags, 0);
+	clearFlags(imgPxlsFlags, image); // clear after allocation
 
 	// Needs:
 	// no_points(size)(N) - pre-computed numbers of contour pixels &
@@ -162,7 +194,7 @@ void classify(std::string imageFile,
 	cout << "Char " << whichChar << " features: \n";
 	//
 	// writing features into the 2D-array ("database"):
-	for (int i=0; i < numFeatures; i++)
+	for (int i=0; i <= numFeatures-1; i++)
 	{
 		cout << "Feature " << i+1 << ": " << features[i] << "\n";
 		// digits:
@@ -255,16 +287,22 @@ void Sequential_moments(int no_points, POINT * P)
 		for(i=1; i < numMoments; i++)
 			myMoments[i]=M[i+1]/(float)sqrt(pow((double)M[1],(double)(i+2)));
 		
-		// compute the feature vectore for this char:
-		//cout << "Now: " << myMoments[1] << endl << endl;
-		features[0] = pow( abs(myMoments[1]), 0.5 ) / (moment1);
-		//cout << "features[0]: " << features[0] << endl;
-		features[1] = (myMoments[2]) / pow( abs(myMoments[1]), 1.5 );
-		features[2] = (myMoments[3]) / pow( abs(myMoments[1]), 2.0 );
-		// features[3] = F4 = M'5 = M5/(M2^(5/2)):
-		features[3] = (myMoments[4]) / pow( abs(myMoments[1]), 2.5 );
-		features[4] = (myMoments[5]) / pow( abs(myMoments[1]), 3.0 );
+		// ============= compute the feature vectore for this char: ==============
 
+		// Note: features[3] = F4 = M'5 = M5/(M2^(5/2))
+		for(int j=0; j <= numFeatures-1; j++)
+		{
+			if(j==0) features[j] = pow( abs(myMoments[1]), 0.5 ) / (moment1);
+			else
+			{
+				features[j] = (myMoments[j+1]) / pow( abs(myMoments[1]), 1.0+(j*0.5) );
+				//features[1] = (myMoments[2]) / pow( abs(myMoments[1]), 1.5 );
+				//features[2] = (myMoments[3]) / pow( abs(myMoments[1]), 2.0 );
+				//features[3] = (myMoments[4]) / pow( abs(myMoments[1]), 2.5 );
+				//features[4] = (myMoments[5]) / pow( abs(myMoments[1]), 3.0 );
+			}
+		}
+		
 		delete[] S;
 		delete[] M;
 	}
@@ -351,10 +389,19 @@ float f_central_moment(float * S, int n, int r, float m1)
 
 // computes the number of contour pixels of a white region:
 //
-int computeNumContourPts(Mat imgGrayComp, bool testFlag)
+int computeNumContourPts(Mat imgGrayComp, vector< vector<int> > & imgPxlsFlags, bool testFlag)
 {
 	// must be ints for processing image:
-	int i=0, j=imgGrayComp.size().height/2; // j - y, i - x
+	int i=0, j=imgGrayComp.size().height/2; // j - y, i - x ; 0, imgGrayComp.size().height/2
+	if (testFlag) // 195x60 ; 969x158
+	{
+		if(gameChoice == 1)
+		{
+			i=195;
+			j=((158-60)/2)+60;
+		}
+	}
+
 	int z0x, z0y, zix, ziy, numPoints = 0, dir = 0;
 	// "circular" array (we don't want a warning here):
 	/* int dirs[8][2] {
@@ -372,25 +419,13 @@ int computeNumContourPts(Mat imgGrayComp, bool testFlag)
 	dirs[7][0] = -1; dirs[7][1] = 0;
 
 
+	int numOfSteps = 2;
 	// ======= to prevent from getting stuck at white noise pixels of contour: =======
-	if(testFlag == 0)
-	{
-		// dilation x1 (increases workload):
-		dilate(imgGrayComp, imgGrayComp, Mat(), Point(-1,-1), 2); // recommended # of steps: 2
-		// erosion x1 (decreases workload):
-		erode(imgGrayComp, imgGrayComp, Mat(), Point(-1,-1), 1); // recommended # of steps: 1
-	}
-	else
-	{
-		//dilation x1 (increases workload):
-		dilate(imgGrayComp, imgGrayComp, Mat(), Point(-1,-1), 2); // recommended # of steps: 3
-		//erosion x1 (decreases workload):
-		erode(imgGrayComp, imgGrayComp, Mat(), Point(-1,-1), 1); // recommended # of steps: 2
-	}
-	// 3,2 for $
-	// 2,1 for 0
-	// 2,1 for 
-	
+	//dilation x? (increases workload):
+	dilate(imgGrayComp, imgGrayComp, Mat(), Point(-1,-1), numOfSteps); // recommended # of steps: ?
+	//erosion x? (decreases workload):
+	erode(imgGrayComp, imgGrayComp, Mat(), Point(-1,-1), numOfSteps); // recommended # of steps: ?
+		
 	// find the 1st (next) char in the image:
 	while( imgGrayComp.ptr(j)[i] == 0 )
 	{
@@ -420,8 +455,8 @@ int computeNumContourPts(Mat imgGrayComp, bool testFlag)
 		dir = (dir+1) % 8;
 	}
 
-	// find the first white neighbor: (why not ... == 0?)
-	while ( imgGrayComp.ptr(ziy+dirs[dir][1])[(zix+dirs[dir][0])] != 255 )
+	// find the first unflagged white neighbor: (why not ... == 0? - grey)
+	while ( imgGrayComp.ptr(ziy+dirs[dir][1])[(zix+dirs[dir][0])] != 255 || imgPxlsFlags[ ziy+dirs[dir][1] ][ zix+dirs[dir][0] ]==1 )
 	{
 		dir = (dir+1) % 8;
 	}
@@ -429,6 +464,7 @@ int computeNumContourPts(Mat imgGrayComp, bool testFlag)
 	// go to the first white neighbor after the black ones:
 	zix = zix + dirs[dir][0];
 	ziy = ziy + dirs[dir][1];
+	imgPxlsFlags[ ziy ][ zix ] = 1; // set flag
 
 	// go around 1 time (use the start/finish pixel)
 	// and count contour pixels:
@@ -447,7 +483,7 @@ int computeNumContourPts(Mat imgGrayComp, bool testFlag)
 		{
 			if ( isInBounds(imgGrayComp, ziy+dirs[dir][1], zix+dirs[dir][0]) )
 			{
-				if ( imgGrayComp.ptr(ziy+dirs[dir][1])[(zix+dirs[dir][0])] == 255 )
+				if ( imgGrayComp.ptr(ziy+dirs[dir][1])[(zix+dirs[dir][0])] == 255)
 				{
 					dir = (dir+1) % 8; // if white
 				}
@@ -464,7 +500,7 @@ int computeNumContourPts(Mat imgGrayComp, bool testFlag)
 			{
 				dir = (dir+1) % 8; // if out of bounds
 			}
-			else if (imgGrayComp.ptr(ziy+dirs[dir][1])[(zix+dirs[dir][0])] == 0)
+			else if (imgGrayComp.ptr(ziy+dirs[dir][1])[(zix+dirs[dir][0])] == 0 || imgPxlsFlags[ ziy+dirs[dir][1] ][ zix+dirs[dir][0] ]==1 )
 			{
 				dir = (dir+1) % 8; // if black
 			}
@@ -474,16 +510,26 @@ int computeNumContourPts(Mat imgGrayComp, bool testFlag)
 		// go to the first white neighbor after the black ones:
 		zix = zix + dirs[dir][0];
 		ziy = ziy + dirs[dir][1];
+		imgPxlsFlags[ ziy ][ zix ] = 1; // set flag
 	}
 	
 	return numPoints;
 }
 
 void writeContourCoords(Mat imgGrayWrite, POINT arrayPoints[],
-		int numPoints)
+		int numPoints, vector< vector<int> > & imgPxlsFlags, bool testFlag)
 {
 	// must be ints for processing image:
-	int i=0, j=imgGrayWrite.size().height/2; // j - width, i - height
+	int i=0, j=imgGrayWrite.size().height/2; // j - y, i - x ; 0, imgGrayComp.size().height/2
+	if (testFlag) // 195x60 ; 969x158
+	{
+		if(gameChoice == 1)
+		{
+			i=195;
+			j=((158-60)/2)+60;
+		}
+	}
+
 	int zix, ziy, currPoint = 0, dir = 0;
 	// "circular" array (we don't want a warning here):
 	int dirs[8][2];
@@ -525,7 +571,7 @@ void writeContourCoords(Mat imgGrayWrite, POINT arrayPoints[],
 		dir = (dir+1) % 8;
 	}
 	// find the first white neighbor:
-	while ( imgGrayWrite.ptr(ziy+dirs[dir][1])[(zix+dirs[dir][0])] == 0 )
+	while ( imgGrayWrite.ptr(ziy+dirs[dir][1])[(zix+dirs[dir][0])] == 0 || imgPxlsFlags[ ziy+dirs[dir][1] ][ zix+dirs[dir][0] ]==1 )
 	{
 		dir = (dir+1) % 8;
 	}
@@ -536,6 +582,7 @@ void writeContourCoords(Mat imgGrayWrite, POINT arrayPoints[],
 	// write it into the array:
 	zix = arrayPoints[currPoint].x;
 	ziy = arrayPoints[currPoint].y;
+	imgPxlsFlags[ ziy ][ zix ] = 1; // set flag
 	
 	// go around 1 time (use the start/finish pixel)
 	// and count contour pixels:
@@ -570,7 +617,7 @@ void writeContourCoords(Mat imgGrayWrite, POINT arrayPoints[],
 			{
 				dir = (dir+1) % 8; // if out of bounds
 			}
-			else if (imgGrayWrite.ptr(ziy+dirs[dir][1])[(zix+dirs[dir][0])] == 0)
+			else if (imgGrayWrite.ptr(ziy+dirs[dir][1])[(zix+dirs[dir][0])] == 0 || imgPxlsFlags[ ziy+dirs[dir][1] ][ zix+dirs[dir][0] ]==1 )
 			{
 				dir = (dir+1) % 8; // if black
 			}
@@ -584,6 +631,7 @@ void writeContourCoords(Mat imgGrayWrite, POINT arrayPoints[],
 		// write it into the array:
 		zix = arrayPoints[currPoint].x;
 		ziy = arrayPoints[currPoint].y;
+		imgPxlsFlags[ ziy ][ zix ] = 1; // set flag
 	}
 }
 
@@ -597,6 +645,7 @@ bool isInBounds(Mat imageForBounds, int y, int x)
 	else return false;
 }
 
+/*
 void customThresholding(Mat imageThresh)
 {
 	// ================= thresholding: =====================
@@ -636,8 +685,10 @@ void customThresholding(Mat imageThresh)
 
 	// ============== done thresholding ==============
 }
+*/
 
 // ================= 1-channel thresholding: =====================
+/*
 void customThresh1D(Mat imageThresh)
 {
 	//imgGrayComp.at<uchar>(5, 4) = 0;
@@ -661,8 +712,9 @@ void customThresh1D(Mat imageThresh)
 
 	// ============== done thresholding ==============
 }
+*/
 
-bool detectNextAndMatch(Mat imgDtct, float fDatabase[][charsToClassify])
+bool test(Mat imgDtct, float fDatabase[][charsToClassify])
 {
 	//cout << "Analyzing contour " << whichChar << "\n";
 
@@ -672,15 +724,20 @@ bool detectNextAndMatch(Mat imgDtct, float fDatabase[][charsToClassify])
 	//
 	float minEuclDist2 = 9999999;
 	float confusionDifferential= 0;
-
+	//
+	vector< vector<int> > imgPxlsFlags (imgDtct.size().height, vector<int>(imgDtct.size().width));
+	clearFlags(imgPxlsFlags, imgDtct); // clear after allocation
+	// ===============================================================================
 
 	// ======= time to find the 4 moments for the char: =======
 	// pre-compute no_points(size)(N):
-	int numPoints = computeNumContourPts(imgDtct, 1);
+	int numPoints = computeNumContourPts(imgDtct, imgPxlsFlags, 1);
+	clearFlags(imgPxlsFlags, imgDtct); // clear after allocation
 	arrayPoints = new POINT[numPoints]; // now that we know the "size"
 
 	// write the coords of every point into the points-array:
-	writeContourCoords(imgDtct, arrayPoints, numPoints);
+	writeContourCoords(imgDtct, arrayPoints, numPoints, imgPxlsFlags, 1);
+	clearFlags(imgPxlsFlags, imgDtct); // clear after allocation
 
 	// Needs:
 	// no_points(size)(N) - pre-computed numbers of contour pixels &
@@ -697,7 +754,7 @@ bool detectNextAndMatch(Mat imgDtct, float fDatabase[][charsToClassify])
 	{
 		// computing the Euclidean distance between train and test images:
 		float squareEuclDist = 0;
-		for(int f=0; f < numFeatures; f++)
+		for(int f=0; f <= numFeatures-1; f++)
 		{
 			//cout << "features[f]: " << features[f] << endl;
 			squareEuclDist += pow(features[f] - fDatabase[f][i],2);
@@ -723,7 +780,7 @@ bool detectNextAndMatch(Mat imgDtct, float fDatabase[][charsToClassify])
 	// 0 1 2 3 4 5 6 7 $;
 	// 0 1 2 3 4 5 6 7 8;
 
-	// ------------------------------------------------------------------------
+	// ------------------- code for output for a centroidal profile ---------------------
 	/*
 	cout << endl;
 	for (int i=0; i < numPoints-1; i++)
@@ -754,90 +811,6 @@ bool detectNextAndMatch(Mat imgDtct, float fDatabase[][charsToClassify])
 	return 0;
 }
 
-//attempts to threshold an image with the name that is passed in
-void threshNick(string name)
-{
-	int r = 0;
-	int c = 0;
-	vector<vector<Point> > contour;
-	vector<Vec4i> hierarchy;
-	Mat image = imread(name, 1);
-	Mat imageGray, imageBin;
-
-	//Abort if file is not successfully opened
-	if(!image.data)
-	{
-		cout << "File does not exist."<<endl;
-		return;
-	}
-
-	imshow("Original Image", image);	
-
-	//dilate(image, image, Mat(), Point(-1,-1), 1);
-	cvtColor(image, imageGray, CV_BGR2GRAY);
-
-	cout << image.rows<<endl;
-	cout << image.cols<<endl;
-	r = image.rows/40;
-	c = image.cols/40;
-	cout << r << endl;
-	cout << c << endl;
-
-	if(r < 1)
-	{
-		r = 1;
-		c = c + 1;
-	}
-
-	if(c < 1)
-	{
-		c = 1;
-		r = r + 1;
-	}
-
-//	blur (imageGray, imageGray, Size(r, c) );
-
-//	imshow("Gray Image", imageGray);
-
-	Mat dst = Mat::zeros(image.rows, image.cols, CV_8UC3);
-	threshold(imageGray, imageBin, 0, 255, THRESH_BINARY | THRESH_OTSU);
-
-	erode(imageBin,imageBin, Mat(), Point(-1,-1), 1);
-
-	imshow("Binary", imageBin);
-
-/*	Mat fg;
-	erode(imageBin, fg, Mat(), Point(-1,-1), 1);
-	imshow("fg", fg);
-	
-	Mat bg;
-	dilate(imageBin, bg, Mat(), Point(-1,-1), 2);
-	threshold(bg, bg, 0, 128, 1);
-	imshow("BG", bg);
-	
-	Mat markers(imageBin.size(), CV_8U, Scalar(0));
-	markers = fg+bg;
-	imshow("markers", markers);
-	
-	markers.convertTo(markers, CV_32S);
-	watershed(image, markers);
-	
-	markers.convertTo(markers, CV_8U);
-	threshold(markers, markers,0,255, THRESH_BINARY | THRESH_OTSU);
-	imshow("TEST", markers);
-	
-	findContours(imageBin, contour, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0,0));
-
-	for(int i = 0; i < contour.size(); i++)
-	{
-		Scalar randomColor = Scalar( rng.uniform(0,255), rng.uniform(0,255), rng.uniform(0,255));
-		drawContours (dst, contour, i, randomColor, 2, 8, hierarchy, 0, Point() );
-	}
-
-	imshow("Contours", dst);*/
-	waitKey(0);
-}
-
 void smoothen(Mat image)
 {
 	int dirs[8][2];
@@ -865,4 +838,11 @@ void smoothen(Mat image)
 			}
 		}
 	}
+}
+
+void clearFlags(vector< vector<int> > & imgPxlsFlags , Mat image)
+{
+	for(int j=0; j < image.size().height; j++)
+		for(int i=0; i < image.size().width; i++)
+			imgPxlsFlags[j][i] = 0; 
 }
