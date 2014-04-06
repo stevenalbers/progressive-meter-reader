@@ -77,7 +77,7 @@ int main()
 	//! applies fixed threshold to the image
 	threshold(imageGray, imageGray, thresh, 255, THRESH_BINARY);
 	//! retrieves contours and the hierarchical information from black-n-white image.
-	//findContours(imageGray, contour, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0,0));
+	findContours(imageGray, contour, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0,0));
 
 	// ============ done testing on a the bigger image: ============
 
