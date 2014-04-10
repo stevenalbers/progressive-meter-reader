@@ -1,45 +1,39 @@
-﻿Build started 4/4/2014 1:40:55 PM.
+﻿Build started 4/10/2014 3:15:55 AM.
      1>Project "C:\Users\Andrey\documents\visual studio 2012\Projects\opencvTest3\opencvTest3\opencvTest3.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\opencv\build\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(113): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(115): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(170): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(172): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(287): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(438): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(441): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(480): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(481): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(484): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(542): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(547): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(552): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(557): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(562): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(698): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(703): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(708): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(713): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(718): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(741): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(742): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(744): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(745): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(769): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(770): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(772): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(773): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(817): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(818): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(821): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(822): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(952): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(1008): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(1009): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(1062): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(1063): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(418): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(421): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(460): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(461): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(464): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(520): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(674): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(717): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(718): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(720): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(721): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(745): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(746): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(748): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(749): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(793): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(794): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(797): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(798): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(859): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(915): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(916): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(946): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(947): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(955): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(956): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(958): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(959): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(966): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(968): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\visual studio 2012\projects\opencvtest3\opencvtest3\main.cpp(979): warning C4018: '<' : signed/unsigned mismatch
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Andrey\documents\visual studio 2012\Projects\opencvTest3\Debug\opencvTest3.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\opencv\build\x86\vc10\lib opencv_core248d.lib opencv_imgproc248d.lib opencv_highgui248d.lib opencv_ml248d.lib opencv_video248d.lib opencv_features2d248d.lib opencv_calib3d248d.lib opencv_objdetect248d.lib opencv_contrib248d.lib opencv_legacy248d.lib opencv_flann248d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Andrey\documents\visual studio 2012\Projects\opencvTest3\Debug\opencvTest3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Andrey\documents\visual studio 2012\Projects\opencvTest3\Debug\opencvTest3.lib" /MACHINE:X86 Debug\main.obj
          opencvTest3.vcxproj -> C:\Users\Andrey\documents\visual studio 2012\Projects\opencvTest3\Debug\opencvTest3.exe
@@ -47,4 +41,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.62
+Time Elapsed 00:00:01.48

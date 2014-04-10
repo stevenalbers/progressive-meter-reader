@@ -4,54 +4,61 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-//#include "header.h"
 #include <math.h>
 
 using namespace cv;
 using namespace std;
 
+// =================================================================================
+// =======================     CONSTANTS - misc. vars:     =========================
+// =================================================================================
+
 bool reachedEndOfRgn = 0;
 int currJVal = 0;
 int numOfDilErdSteps = 0;
 std::string str;
-int rightOfObj = 0;
-int rightOfRgn = 0;
+int rightOfChar = 0;
+int rightOfJVal = 0;
 int gameChoice = 0; // no game chosen
 int thresh = 50;
 const int charsToClassify = 11; // 0-9 digits + $ sign
-float ctrd[2] = {0.0, 0.0}; // for centroidal profiling
 RNG rng(12345);
 
-// ===================================================================
+// =================================================================================
+// =======================      CONSTANTS - moments:      ==========================
+// =================================================================================
 
 // temp arrays placed here because of an issue with passing its pointers:
-const int numMoments = 4; //
-float myMoments[numMoments];
+const int numCentralMoments = 4; 
+float centralMoments[numCentralMoments];
 
-const int numFeatures = 3;
-// should be manually changed to quantity = numMoments-1 since it's a const.
+const int numFeatureMoments = 3;
+// should be manually changed to quantity = numCentralMoments-1 since it's a const.
 
-float features[numFeatures];
+float featureMoments[numFeatureMoments];
 float moment1 = 0;
 
-// ===================================================================
+// =================================================================================
+// =======================       CONSTANTS - points:       =========================
+// =================================================================================
+
 struct POINT {
-   float x, y;
+	float x, y;
 };
 
-POINT j0tl; // top left point of region
-POINT j0br; // bottom right point of region
-POINT j1tl; // top left point of region
-POINT j1br; // bottom right point of region
-POINT j2tl; // top left point of region
-POINT j2br; // bottom right point of region
-POINT j3tl; // top left point of region
-POINT j3br; // bottom right point of region
-POINT j4tl; // top left point of region
-POINT j4br; // bottom right point of region
+struct JVALBOUNDS {
+	POINT topLeft, bottomRight;
+};
 
+const int numJVals = 5;
+JVALBOUNDS jValsCoords[numJVals]; // assuming 5 jackpot values per game
 
-// ===================================================================
+POINT ctrd; // for centroidal profiling
+
+// =================================================================================
+// ======================       FUNCTION PROTOTYPES:       =========================
+// =================================================================================
+
 void train(std::string , float [][charsToClassify], char );
 void Sequential_moments(int , POINT * );
 void Signature(int , POINT * , float * );
@@ -61,34 +68,32 @@ float f_central_moment(float * , int , int , float );
 int computeNumContourPts(Mat , vector< vector<int> > & , bool );
 void writeContourCoords(Mat , POINT arrayPoints[], int , vector< vector<int> > & , bool );
 bool isInBounds(Mat imageForBounds, int , int );
-//void customThresholding(Mat );
-void customThresh1D(Mat );
 void detectNextAndMatch(Mat , Mat , float [][charsToClassify]);
 //void threshNick(string );
-void smoothen(Mat img);
 void clearFlags(vector< vector<int> > & , Mat);
 void mapContours(Mat , POINT arrayPoints[], int);
+void locateJValue( int, int, int, int, int );
+void prepareDtxnVars( int );
+void formatCurrJVal();
+void mainMenu();
+void cleanImageCopy( Mat );
 
-// ===================================================================
-//								MAIN()
-// ===================================================================
+// =================================================================================================================
+//														MAIN()
+// =================================================================================================================
+
 int main()
 {
 	Mat imageGray; // for greyscale and thresholding
 	Mat imgWithContours; // for the image with white object contours
 	// an array to hold moments for every char class:
-	float fDatabase [numFeatures][charsToClassify]; // moments database
-	int i=0, x=0, y=0;
+	float fDatabase [numFeatureMoments][charsToClassify]; // moments database
 	str = "";
 	
-	// ===========================================  CHOOSING THE GAME  =============================================
-	cout << "\nPlease enter the ID of the game you will train and test on: \n";
-	cout << "0 - quit \n";
-	cout << "1 - CashBurst \n";
-	cout << "2 - InstantRiches \n";
-	cout << "\nID: ";
-	cin >> gameChoice;
-	cout << endl;
+	// ============  CHOOSING THE GAME  ============
+
+	mainMenu();
+
 	// gameChoice = 1; // Cashburst (ID needed for specifying training and testing images).
 	while(gameChoice < 0 || gameChoice > 2)
 	{
@@ -97,54 +102,25 @@ int main()
 		cin >> gameChoice;
 	}
 
-	// ===========================================  TRAINING  =============================================
-
 	if(gameChoice == 0) return 0; // exit
-	else if (gameChoice == 1) // Cashburst
+	
+	// =========================================  CASHBURST:  =============================================
+
+	else if (gameChoice == 1) 
 	{
 		numOfDilErdSteps = 1;
-		// top left:
-		j0tl.x = 90;
-		j0tl.y = 40;
-		// bottom right:
-		j0br.x = 548;
-		j0br.y = 132;
-		// end of region
-		rightOfRgn = j0br.x;
-		// start at horizontal displacement:
-		rightOfObj = j0tl.x;
 
-		// j1 - top left:
-		j1tl.x = 77;
-		j1tl.y = 182;
-		// bottom right:
-		j1br.x = 306;
-		j1br.y = 247;
+		// ===============================  LOCATE and write JACKPOT VALUES  ===================================
 
-		// j2 - top left:
-		j2tl.x = 331;
-		j2tl.y = 182;
-		// bottom right:
-		j2br.x = 562;
-		j2br.y = 247;
-
-		// j3 - top left:
-		j3tl.x = 77;
-		j3tl.y = 276;
-		// bottom right:
-		j3br.x = 306;
-		j3br.y = 341;
-
-		// j4 - top left:
-		j4tl.x = 331;
-		j4tl.y = 276;
-		// bottom right:
-		j4br.x = 562;
-		j4br.y = 341;
+		locateJValue( 0, 90, 40, 548, 132 );
+		locateJValue( 1, 77, 182, 306, 247 );
+		locateJValue( 2, 331, 182, 562, 247 );
+		locateJValue( 3, 77, 276, 306, 341 );
+		locateJValue( 4, 331, 276, 562, 341 );
 	
-		// ========= go thru every char to classify =========
-		cout << endl << endl << endl;
+		// =================  TRAINING (FIRST jackpot value) - go thru every char to classify:  ===================
 
+		cout << endl << endl << endl;
 		train("../src/trainCashburstJ1/0.jpg", fDatabase, '0');
 		train("../src/trainCashburstJ1/1.jpg", fDatabase, '1');
 		train("../src/trainCashburstJ1/2.jpg", fDatabase, '2');
@@ -157,32 +133,26 @@ int main()
 		train("../src/trainCashburstJ1/9.jpg", fDatabase, '9');
 		train("../src/trainCashburstJ1/dollar.jpg", fDatabase, '$');
 	}
-	else if (gameChoice == 2) // Cashburst
+	
+	// ==========================  INSTANT RICHES (LED-style font) - 1st jackpot value:  ==============================
+
+	else if (gameChoice == 2) 
 	{
 		numOfDilErdSteps = 1;
-		// top left:
-		j0tl.x = 252;
-		j0tl.y = 200;
-		// bottom right:
-		j0br.x = 507;
-		j0br.y = 266;
-		// end of region
-		rightOfRgn = j0br.x;
-		// start at horizontal displacement:
-		rightOfObj = j0tl.x;
 
-		POINT j1tl;
-		j1tl.x = 100;
-		j1tl.y = 200;
-		POINT j2tl;
-		j2tl.x = 100;
-		j2tl.y = 200;
-		POINT j3tl;
-		j3tl.x = 100;
-		j3tl.y = 200;
-		POINT j4tl;
-		j4tl.x = 100;
-		j4tl.y = 200;
+		// high resolution:
+		locateJValue( 0, 252, 200, 507, 266 );
+		locateJValue( 1, 100, 200, 100, 200 );
+		locateJValue( 2, 100, 200, 100, 200 );
+		locateJValue( 3, 100, 200, 100, 200 );
+		locateJValue( 4, 100, 200, 100, 200 );
+
+		// low resolution:
+		/* locateJValue( 0, 252, 200, 507, 266 );
+		locateJValue( 1, 100, 200, 100, 200 );
+		locateJValue( 2, 100, 200, 100, 200 );
+		locateJValue( 3, 100, 200, 100, 200 );
+		locateJValue( 4, 100, 200, 100, 200 ); */
 	
 		// ========= go thru every char to classify =========
 		cout << endl << endl << endl;
@@ -200,33 +170,34 @@ int main()
 		train("../src/trainInstRichJ1/dollar.jpg", fDatabase, '$');
 	}
 	
-	// =====================================  TESTING - GREYSCALE AND THRESH  ======================================
+	// =====================================  TESTING - GREYSCALE AND THRESHOLDING  ======================================
 
-	// ========== all moments are now in database ===========
-    // ============== process the test image: ===============
+	// ========== All moments are now in database. ===========
+    // ============== Process the test image: ===============
 
 	// greyscale:
 	Mat image = imread("../src/in.jpg", 1); // converts image from one color space to another
 	cvtColor(image, imageGray, COLOR_BGR2GRAY );
 	imshow("greyscale", imageGray);
-	imwrite( "../src/out0-greyscale.png" , imageGray); // saves the chosen output image
+	imwrite( "../src/outA-greyscale.png" , imageGray); // saves the chosen output image
 	
 	// thresholding:
 	threshold(imageGray, imageGray, thresh, 255, THRESH_BINARY); // arg3 = threshold
 	imshow("thresh", imageGray);
-	imwrite( "../src/out1-thresh.png" , imageGray); // saves the chosen output image
+	imwrite( "../src/outB-thresh.png" , imageGray); // saves the chosen output image
+
+	// =========================================  TESTING - PREPARATION  ============================================
+	
+	cout << "\nNumber of feature moments: " << numFeatureMoments << "\n\n"; // recognition based on Euclidean distances starts here
+
+	// create a blank copy of the same size as the testing image for MAPPING CONTOURS:
+	threshold(imageGray, imgWithContours, thresh, 255, THRESH_BINARY); // threshold() used to copy one image into another
+
+	// clean the copy to make sure it's blank:
+	cleanImageCopy( imgWithContours );
 
 	// =========================================  TESTING - DETECTION  ============================================
-	// recognition based on Euclidean distances starts here:
-	cout << "\nNumber of feature moments: " << numFeatures << "\n\n";
-	// threshold() used to copy one image into another:
-	threshold(imageGray, imgWithContours, thresh, 255, THRESH_BINARY); 
-
-	// create a blank copy of the same size as the testing image:
-	for(int j=0; j < imgWithContours.size().height; j++)
-		for(int i=0; i < imgWithContours.size().width; i++)
-			imgWithContours.ptr(j)[i] = 0;
-
+	
 	/*if (gameChoice = 2)
 	{
 		dilate(imageGray, imageGray, Mat(), Point(-1,-1), 1); // use only for LED-style fonts
@@ -235,64 +206,71 @@ int main()
 		imwrite( "../src/out2-extraDilErd.png" , imageGray); // saves the chosen output image
 	}*/	
 
-	// detect and recognize character by character:
-	while(!reachedEndOfRgn)
+	for ( currJVal=0; currJVal < numJVals; currJVal++)
 	{
-		detectNextAndMatch(imageGray, imgWithContours, fDatabase);
+		if( currJVal == 1 )
+		{
+			cout << endl << endl << endl;
+			train("../src/trainCashburstJ25/0.jpg", fDatabase, '0');
+			train("../src/trainCashburstJ25/1.jpg", fDatabase, '1');
+			train("../src/trainCashburstJ25/2.jpg", fDatabase, '2');
+			train("../src/trainCashburstJ25/3.jpg", fDatabase, '3');
+			train("../src/trainCashburstJ25/4.jpg", fDatabase, '4');
+			train("../src/trainCashburstJ25/5.jpg", fDatabase, '5');
+			train("../src/trainCashburstJ25/6.jpg", fDatabase, '6');
+			train("../src/trainCashburstJ25/7.jpg", fDatabase, '7');
+			train("../src/trainCashburstJ25/8.jpg", fDatabase, '8');
+			train("../src/trainCashburstJ25/9.jpg", fDatabase, '9');
+			train("../src/trainCashburstJ25/dollar.jpg", fDatabase, '$');
+		}
+
+		// jackpot value 0:
+		prepareDtxnVars( currJVal ); // set up boundaries FOR THE GIVEN REGION to perform char-by-char detection
+
+		while(!reachedEndOfRgn)
+		{
+			detectNextAndMatch(imageGray, imgWithContours, fDatabase);
+			// Including jValID as an arg would complicate the args list of the function
+			// when it is shared by both training and testing phases.
+		}
+
+		cout << "\nRecognized text: ";
+		formatCurrJVal();
+		str = ""; // clear the string for the next jackpot value.
 	}
 
-	//shows the dilated version of thresh image:
-	imshow("dilErd", imageGray);
-	imwrite( "../src/out2-dilErd.png" , imageGray); // saves the chosen output image
+	// Do the same with 2-5 jackpot values, but somewhat differently; treat 2-5 the same, though.
 
-	// =========================================  DRAWING CONTOURS  ============================================
-	dilate(imgWithContours, imgWithContours, Mat(), Point(-1,-1), 1);
+	// 1) training
+	// 2) testing
+	//   a) preparation
+	//   b) detection w/ mapping
+	//   c) displaying recognition result
 
-	/*Canny(imgWithContours, imgWithContours, 100, 200, 3);
-	vector<vector<Point> > contour;
-	vector<Vec4i> hierarchy;
-	RNG rng(12345);
-	//Mat imgWithContoursColor( imgWithContours.size() , CV_8UC3 );
-	//cvtColor(imgWithContours, imgWithContoursColor, CV_GRAY2BGR );
-	findContours(imgWithContours, contour, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0,0));
-	Mat drawing = Mat::zeros( imgWithContours.size() , CV_8UC3);
-	
-	vector<vector<Point> > polygons(contour.size()); // 2D-vtr mats
-	vector<Rect> boxes(contour.size()); // a vector of contourss
 
-	// !!! define contours for drawing:
-	for(int i = 0; i < contour.size(); i++)
-	{
-		//! approximates contour or a curve using Douglas-Peucker algorithm
-		approxPolyDP( Mat(contour[i]), polygons[i], 3, true );
-		//! computes the bounding rectangle for a contour
-		boxes[i] = boundingRect( Mat(polygons[i]) );
-	}
-	
-	// draw contours
-	for(int i = 0; i < contour.size(); i++)
-	{
-		Scalar color = Scalar( rng.uniform(0,255), rng.uniform(0,255), rng.uniform(0,255));
-		//Scalar randomColor = Scalar( 128, 128, 128 );
-		//rectangle(imgWithContoursColor, boxes[i].tl(), boxes[i].br(), randomColor, 2, 8, 0);
-		drawContours( drawing, contour, i, color, 2, 8, hierarchy );
-	}
+	// ================================  display IMAGES WITH CHANGES step-by-step:  =====================================
+
+
+	// !!!!!!!!!!!!! include 1 image copy (x1 dil) from detectNextAndMatch() !!!!!!!!!!!!!!!!!
+	/*
+	// after dilation x1:
+	imshow("dil", imageDil);
+	imwrite( "../src/outX-dil.png" , imageDil); // saves the chosen output image
 	*/
 
-	//shows the image with contour contours:
+
+	//shows the PROCESSED version of thresh image (dil x1, erd x1):
+	imshow("dilErd", imageGray);
+	imwrite( "../src/outY-dilErd.png" , imageGray); // saves the chosen output image
+
+	// for LED:
+	//if (gameChoice == 2) dilate(imgWithContours, imgWithContours, Mat(), Point(-1,-1), 1); 
+
+	//shows the image with CONTOURS:
 	imshow("contours", imgWithContours);
-	imwrite( "../src/out3-contours.png" , imgWithContours); // saves the chosen output image
+	imwrite( "../src/outZ-contours.png" , imgWithContours); // saves the chosen output image
 
 	// ====================== closing time - display recognition result: ========================
-	cout << "\nRecognized text: ";
-	
-	for(int s=0 ; s < str.length() ; s++)
-	{
-		cout << str.at(s); // copy the char to the right-to-left string
-		if(s == str.length()-3) cout << "."; // 3rd char from right - decimal point
-		else if( (str.length()-s)%3==0 && str.at(s)!='$' ) cout << ","; // 3rd char from right - decimal point
-	}
-
 	cout << "\n\nDone.\n";
 	waitKey(0);
 	return 0;
@@ -339,14 +317,14 @@ void train(std::string imageFile, float fDatabase [][charsToClassify],
 	cout << "Char " << whichChar << " features: \n";
 	//
 	// writing features into the 2D-array ("database"):
-	for (int i=0; i <= numFeatures-1; i++)
+	for (int i=0; i <= numFeatureMoments-1; i++)
 	{
-		cout << "Feature " << i+1 << ": " << features[i] << "\n";
+		cout << "Feature " << i+1 << ": " << featureMoments[i] << "\n";
 		// digits:
 		if ( whichChar >= 48 && whichChar <= 57 )
-			fDatabase[i][ int(whichChar) - 48 ] = features[i];
+			fDatabase[i][ int(whichChar) - 48 ] = featureMoments[i];
 		// dollar sign:
-		else fDatabase[i][ charsToClassify - 1 ] = features[i];
+		else fDatabase[i][ charsToClassify - 1 ] = featureMoments[i];
 	}
 	cout << endl;
 
@@ -357,7 +335,7 @@ void train(std::string imageFile, float fDatabase [][charsToClassify],
 	{
 		for (int i=0; i < numPoints-1; i++)
 		{
-			cout << pow( pow(abs(arrayPoints[i].x - ctrd[0]),2.0) + pow(abs(arrayPoints[i].y - ctrd[1]),2.0) , 0.5) << endl;
+			cout << pow( pow(abs(arrayPoints[i].x - ctrd.x),2.0) + pow(abs(arrayPoints[i].y - ctrd.y),2.0) , 0.5) << endl;
 		}
 	}
 	*/
@@ -409,8 +387,8 @@ void Sequential_moments(int no_points, POINT * P)
 	int i;
 	float *S,*M;
 
-	for(i=0; i < numMoments; i++)
-		myMoments[i]=0.0;
+	for(i=0; i < numCentralMoments; i++)
+		centralMoments[i]=0.0;
 
 	// need to determine min_length (min number of contour points)
 	// to determine whether the white region is a good candidate
@@ -420,27 +398,27 @@ void Sequential_moments(int no_points, POINT * P)
 	{ 
 		S = new float[no_points];
 		Signature(no_points, P, S);
-		M = new float[numMoments+1];
+		M = new float[numCentralMoments+1];
 		M[0] = f_moment(S, no_points, 1);
 		moment1 = M[0];
 
-		for(i=1; i < numMoments+1; i++)
+		for(i=1; i < numCentralMoments+1; i++)
 			M[i] = f_central_moment(S, no_points, i+1, M[0]);
 
 		//normalization:
-		myMoments[0]=(float)sqrt((double)M[1])/M[0];
-		for(i=1; i < numMoments; i++)
-			myMoments[i]=M[i+1]/(float)sqrt(pow((double)M[1],(double)(i+2)));
+		centralMoments[0]=(float)sqrt((double)M[1])/M[0];
+		for(i=1; i < numCentralMoments; i++)
+			centralMoments[i]=M[i+1]/(float)sqrt(pow((double)M[1],(double)(i+2)));
 		
 		// ============= compute the feature vectore for this char: ==============
 
 		// Note: features[3] = F4 = M'5 = M5/(M2^(5/2))
-		for(int j=0; j <= numFeatures-1; j++)
+		for(int j=0; j <= numFeatureMoments-1; j++)
 		{
-			if(j==0) features[j] = pow( abs(myMoments[1]), 0.5 ) / (moment1);
+			if(j==0) featureMoments[j] = pow( abs(centralMoments[1]), 0.5 ) / (moment1);
 			else
 			{
-				features[j] = (myMoments[j+1]) / pow( abs(myMoments[1]), 1.0+(j*0.5) );
+				featureMoments[j] = (centralMoments[j+1]) / pow( abs(centralMoments[1]), 1.0+(j*0.5) );
 			}
 		}
 		
@@ -490,8 +468,8 @@ void centroid(int size, POINT * P, float * cgx, float * cgy)
   *cgx=(float)(Sumx/Summ);
   *cgy=(float)(Sumy/Summ);
 
-  ctrd[0] = *cgx;
-  ctrd[1] = *cgy;
+  ctrd.x = *cgx;
+  ctrd.y = *cgy;
 }
 
 // ===============================================================
@@ -538,31 +516,29 @@ int computeNumContourPts(Mat imgGrayComp, vector< vector<int> > & imgPxlsFlags, 
 
 	if (testFlag) 
 	{
-		if (currJVal == 0) 
+		i = rightOfChar; // horizontal component to start with
+		j = ( (jValsCoords[currJVal].bottomRight.y-jValsCoords[currJVal].topLeft.y)/2 ) + jValsCoords[currJVal].topLeft.y;
+
+		/*if (currJVal == 1) 
 		{
-			i = rightOfObj; // horizontal component to start with
-			j = ((j0br.y-j0tl.y)/2)+j0tl.y;
-		}
-		if (currJVal == 1) 
-		{
-			i = rightOfObj; // horizontal component to start with
+			i = rightOfChar; // horizontal component to start with
 			j = ((j1br.y-j1tl.y)/2)+j1tl.y;
 		}
 		if (currJVal == 2) 
 		{
-			i = rightOfObj; // horizontal component to start with
+			i = rightOfChar; // horizontal component to start with
 			j = ((j2br.y-j2tl.y)/2)+j2tl.y;
 		}
 		if (currJVal == 3) 
 		{
-			i = rightOfObj; // horizontal component to start with
+			i = rightOfChar; // horizontal component to start with
 			j = ((j3br.y-j3tl.y)/2)+j3tl.y;
 		}
 		if (currJVal == 4) 
 		{
-			i = rightOfObj; // horizontal component to start with
+			i = rightOfChar; // horizontal component to start with
 			j = ((j4br.y-j4tl.y)/2)+j4tl.y;
-		}
+		}*/
 	}
 
 	int z0x, z0y, zix, ziy, numPoints = 0, dir = 0;
@@ -595,7 +571,7 @@ int computeNumContourPts(Mat imgGrayComp, vector< vector<int> > & imgPxlsFlags, 
 
 		if(testFlag)
 		{
-			if( i >= rightOfRgn ) 
+			if( i >= rightOfJVal ) 
 			{
 				reachedEndOfRgn = 1;
 				return 0;
@@ -692,33 +668,33 @@ void writeContourCoords(Mat imgGrayWrite, POINT arrayPoints[],
 {
 	// must be ints for processing image:
 	int i=0, j=imgGrayWrite.size().height/2; // j - y, i - x ; 0, imgGrayComp.size().height/2
+
+
 	if (testFlag) // 195x60 ; 969x158
 	{
-		if (currJVal == 0) 
+		i = rightOfChar; // horizontal component to start with
+		j = ( (jValsCoords[currJVal].bottomRight.y-jValsCoords[currJVal].topLeft.y)/2 ) + jValsCoords[currJVal].topLeft.y;
+
+		/*if (currJVal == 1) 
 		{
-			i = rightOfObj; // horizontal component to start with
-			j = ((j0br.y-j0tl.y)/2)+j0tl.y;
-		}
-		if (currJVal == 1) 
-		{
-			i = rightOfObj; // horizontal component to start with
+			i = rightOfChar; // horizontal component to start with
 			j = ((j1br.y-j1tl.y)/2)+j1tl.y;
 		}
 		if (currJVal == 2) 
 		{
-			i = rightOfObj; // horizontal component to start with
+			i = rightOfChar; // horizontal component to start with
 			j = ((j2br.y-j2tl.y)/2)+j2tl.y;
 		}
 		if (currJVal == 3) 
 		{
-			i = rightOfObj; // horizontal component to start with
+			i = rightOfChar; // horizontal component to start with
 			j = ((j3br.y-j3tl.y)/2)+j3tl.y;
 		}
 		if (currJVal == 4) 
 		{
-			i = rightOfObj; // horizontal component to start with
+			i = rightOfChar; // horizontal component to start with
 			j = ((j4br.y-j4tl.y)/2)+j4tl.y;
-		}
+		}*/
 	}
 
 	int zix, ziy, currPoint = 0, dir = 0;
@@ -836,75 +812,6 @@ bool isInBounds(Mat imageForBounds, int y, int x)
 	else return false;
 }
 
-/*
-void customThresholding(Mat imageThresh)
-{
-	// ================= thresholding: =====================
-
-	// {245, 254, 255}, {245, 255, 255}
-	// not: {252, 254, 255} - black specks (need to lower blue)
-	// not: {xx, 254, 255} - allows for yellow font
-	// not: {xx, 255, 254} - allows for yellow font
-	int blackThresh[3] = {252, 252, 252};
-
-	//cout << "\nHeight: " << imageThresh.size().height << endl;
-	//cout << "\nWidth: " << imageThresh.size().width << endl;
-	//imgGrayComp.at<uchar>(5, 4) = 0;
-
-	// modifying value of every pixel - thresholding:
-	for(int i=0 ; i < (imageThresh.size().height) ; i++) // row
-	{
-	    for(int j=0 ; j < (imageThresh.size().width) ; j++) // col
-	    {
-	    	// finding nearly white pixel and making them abs. white:
-	    	if ( imageThresh.ptr(i)[3*j+2] <= blackThresh[2] &&
-	    		imageThresh.ptr(i)[3*j+1] <= blackThresh[1] &&
-	    		imageThresh.ptr(i)[3*j] <= blackThresh[0] )
-	    	{
-	    		imageThresh.ptr(i)[3*j+2] = 0;	// red		(r%3=2)
-	    		imageThresh.ptr(i)[3*j+1] = 0;	// green	(g%3=1)
-	    		imageThresh.ptr(i)[3*j] = 0;	// blue		(b%3=0)
-	    	}
-	    	else // make the rest of the image black:
-	    	{
-	    		imageThresh.ptr(i)[3*j+2] = 255;	// red		(r%3=2)
-	    		imageThresh.ptr(i)[3*j+1] = 255;	// green	(g%3=1)
-	    		imageThresh.ptr(i)[3*j] = 255;		// blue		(b%3=0)
-	    	}
-	    }
-	}
-
-	// ============== done thresholding ==============
-}
-*/
-
-// ================= 1-channel thresholding: =====================
-/*
-void customThresh1D(Mat imageThresh)
-{
-	//imgGrayComp.at<uchar>(5, 4) = 0;
-
-	// modifying value of every pixel - thresholding:
-	for(int i=0 ; i < (imageThresh.size().height) ; i++) // row
-	{
-	    for(int j=0 ; j < (imageThresh.size().width) ; j++) // col
-	    {
-	    	// finding nearly white pixel and making them abs. black:
-	    	if ( imageThresh.ptr(i)[j] < 245)
-	    	{
-	    		imageThresh.ptr(i)[j] = 0;
-	    	}
-	    	else // make the rest of the image white:
-	    	{
-	    		imageThresh.ptr(i)[j] = 255;
-	    	}
-	    }
-	}
-
-	// ============== done thresholding ==============
-}
-*/
-
 void detectNextAndMatch(Mat imgDtct, Mat imgWithContours, float fDatabase[][charsToClassify])
 {
 	//cout << "Analyzing contour " << whichChar << "\n";
@@ -946,10 +853,10 @@ void detectNextAndMatch(Mat imgDtct, Mat imgWithContours, float fDatabase[][char
 	{
 		// computing the Euclidean distance between train and test images:
 		float squareEuclDist = 0;
-		for(int f=0; f <= numFeatures-1; f++)
+		for(int f=0; f <= numFeatureMoments-1; f++)
 		{
 			//cout << "features[f]: " << features[f] << endl;
-			squareEuclDist += pow(features[f] - fDatabase[f][i],2);
+			squareEuclDist += pow(featureMoments[f] - fDatabase[f][i],2);
 		}
 		float euclDist = pow( squareEuclDist, 0.5 );
 
@@ -973,7 +880,7 @@ void detectNextAndMatch(Mat imgDtct, Mat imgWithContours, float fDatabase[][char
 	cout << endl;
 	for (int i=0; i < numPoints-1; i++)
 	{
-		cout << pow( pow(abs(arrayPoints[i].x - ctrd[0]),2.0) + pow(abs(arrayPoints[i].y - ctrd[1]),2.0) , 0.5) << endl;
+		cout << pow( pow(abs(arrayPoints[i].x - ctrd.x),2.0) + pow(abs(arrayPoints[i].y - ctrd.y),2.0) , 0.5) << endl;
 	}
 	*/
 	
@@ -1003,48 +910,25 @@ void detectNextAndMatch(Mat imgDtct, Mat imgWithContours, float fDatabase[][char
 	// ================ FIND THE RIGHTMOST PIXEL TO DETECT NEXT CHARACTER =================
 	for(int z=0; z < numPoints; z++)
 	{
-		if(rightOfObj < arrayPoints[z].x)
+		if(rightOfChar < arrayPoints[z].x)
 		{
 			// get off the current set of connected components
 			// before you proceed to the next one:
-			if(gameChoice == 1) rightOfObj = arrayPoints[z].x + 4; 
-			if(gameChoice == 2) rightOfObj = arrayPoints[z].x + 2; 
+			if(gameChoice == 1) rightOfChar = arrayPoints[z].x + 4; 
+			if(gameChoice == 2) rightOfChar = arrayPoints[z].x + 2; 
 		}
 	}
 
 	// ============================ CLOSING TIME IN THE FUNCTION =============================
-	delete[] arrayPoints; // release memory before returning (with or without a value).
+	delete[] arrayPoints; // release memory before returning.
 	return;
 }
 
-void smoothen(Mat image)
-{
-	int dirs[8][2];
-	dirs[0][0] = -1; dirs[0][1] = -1;
-	dirs[1][0] = 0; dirs[1][1] = -1;
-	dirs[2][0] = 1; dirs[2][1] = -1;
-	dirs[3][0] = 1; dirs[3][1] = 0;
-	dirs[4][0] = 1; dirs[4][1] = 1;
-	dirs[5][0] = 0; dirs[5][1] = 1;
-	dirs[6][0] = -1; dirs[6][1] = 1;
-	dirs[7][0] = -1; dirs[7][1] = 0;
-
-	for(int j=0; j < image.size().height; j++)
-	{
-		for(int i=0; i < image.size().width; i++)
-		{
-			int blackNeighbors = 0;
-			//computeBlackNeighbors();
-
-			if( image.ptr(j)[i] == 255 )
-			{
-				// yes/no = determine if it's a dollar sign (Eucl. dist. thresh. should depend on num. of moments):
-				// yes:
-				// no: 
-			}
-		}
-	}
-}
+// ==================================================================================
+// void clearFlags(vector< vector<int> > & imgPxlsFlags , Mat image)
+// 
+//  - Used to prevent infinite looping during contour analysis.
+// ==================================================================================
 
 void clearFlags(vector< vector<int> > & imgPxlsFlags , Mat image)
 {
@@ -1067,3 +951,55 @@ void mapContours(Mat imgWithContours, POINT arrayPoints[], int numPoints)
 	}
 }
 
+void locateJValue( int jValID, int topLeftX, int topLeftY, int bottomRightX, int bottomRightY )
+{
+	// top left:
+	jValsCoords[jValID].topLeft.x = topLeftX;
+	jValsCoords[jValID].topLeft.y = topLeftY;
+	// bottom right:
+	jValsCoords[jValID].bottomRight.x = bottomRightX;
+	jValsCoords[jValID].bottomRight.y = bottomRightY;
+}
+
+
+void prepareDtxnVars( int jValID )
+{
+	// end of region
+	rightOfJVal = jValsCoords[0].bottomRight.x;
+	// start at horizontal displacement:
+	rightOfChar = jValsCoords[0].topLeft.x;
+}
+
+// ======================================================================================
+// void formatCurrJVal()
+// 
+//  - prints the jackpot value on the fly and places commas and a dot where they belong.
+// ======================================================================================
+
+void formatCurrJVal()
+{
+	for(int s=0 ; s < str.length() ; s++) // format the jackpot value here.
+	{
+		cout << str.at(s); // copy the char to the right-to-left string
+		if(s == str.length()-3) cout << "."; // 3rd char from right - decimal point
+		else if( (str.length()-s)%3==0 && str.at(s)!='$' ) cout << ","; // 3rd char from right - decimal point
+	}
+}
+
+void mainMenu()
+{
+	cout << "\nPlease enter the ID of the game you will train and test on: \n";
+	cout << "0 - quit \n";
+	cout << "1 - CashBurst \n";
+	cout << "2 - InstantRiches \n";
+	cout << "\nID: ";
+	cin >> gameChoice;
+	cout << endl;
+}
+
+void cleanImageCopy( Mat imgWithContours )
+{	
+	for(int j=0; j < imgWithContours.size().height; j++)
+		for(int i=0; i < imgWithContours.size().width; i++)
+			imgWithContours.ptr(j)[i] = 0;
+}
