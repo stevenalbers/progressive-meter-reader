@@ -1,0 +1,6 @@
+Region Name,Meter Value
+   Jackpot 1,   1000001
+   Jackpot 2,   12502
+   Jackpot 3,   7502
+   Jackpot 4, 2505
+   Jackpot 5,   1010

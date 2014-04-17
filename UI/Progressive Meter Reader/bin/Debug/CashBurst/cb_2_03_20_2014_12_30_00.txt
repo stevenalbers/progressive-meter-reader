@@ -1,0 +1,6 @@
+Region Name,Meter Value
+Jackpot 1,1234561
+Jackpot 2,11101
+Jackpot 3,5502
+Jackpot 4,3501
+Jackpot 5,1110
