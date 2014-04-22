@@ -1,0 +1,580 @@
+
+Number of feature moments: 3
+
+
+
+
+Classifying 0
+Num of points: 206
+Char 0 features: 
+Feature 1: 0.0151422
+Feature 2: 11.8848
+Feature 3: -13.1966
+
+Classifying 1
+Num of points: 213
+Char 1 features: 
+Feature 1: 0.0143828
+Feature 2: 28.6984
+Feature 3: -26.3394
+
+Classifying 2
+Num of points: 259
+Char 2 features: 
+Feature 1: 0.0234757
+Feature 2: 5.51763
+Feature 3: -8.66681
+
+Classifying 3
+Num of points: 265
+Char 3 features: 
+Feature 1: 0.0275382
+Feature 2: 4.33936
+Feature 3: -7.10215
+
+Classifying 4
+Num of points: 233
+Char 4 features: 
+Feature 1: 0.00861138
+Feature 2: 102.352
+Feature 3: -105.821
+
+Classifying 5
+Num of points: 357
+Char 5 features: 
+Feature 1: 0.0225102
+Feature 2: 9.77442
+Feature 3: -16.6964
+
+Classifying 6
+Num of points: 221
+Char 6 features: 
+Feature 1: 0.0181964
+Feature 2: 8.83246
+Feature 3: -13.4745
+
+Classifying 7
+Num of points: 239
+Char 7 features: 
+Feature 1: 0.0191904
+Feature 2: 11.5734
+Feature 3: -15.8223
+
+Classifying 8
+Num of points: 210
+Char 8 features: 
+Feature 1: 0.0212038
+Feature 2: 5.47664
+Feature 3: -8.81844
+
+Classifying 9
+Num of points: 219
+Char 9 features: 
+Feature 1: 0.0192169
+Feature 2: 7.43968
+Feature 3: -11.7587
+
+Classifying $
+Num of points: 226
+Char $ features: 
+Feature 1: 0.02005
+Feature 2: 12.7667
+Feature 3: -14.6102
+
+Num of points: 226
+Eucl. dist. from 0: 1.67772
+Eucl. dist. from 1: 19.7719
+Eucl. dist. from 2: 9.38588
+Eucl. dist. from 3: 11.2986
+Eucl. dist. from 4: 127.836
+Eucl. dist. from 5: 3.64988
+Eucl. dist. from 6: 4.10531
+Eucl. dist. from 7: 1.70099
+Eucl. dist. from 8: 9.32253
+Eucl. dist. from 9: 6.05357
+Eucl. dist. from $: 0.0118812
+  =  Min. eucl. dist.: 0.0118812
+
+Num of points: 213
+Eucl. dist. from 0: 21.1422
+Eucl. dist. from 1: 0.201442
+Eucl. dist. from 2: 28.9501
+Eucl. dist. from 3: 30.8408
+Eucl. dist. from 4: 108.552
+Eucl. dist. from 5: 21.0379
+Eucl. dist. from 6: 23.4669
+Eucl. dist. from 7: 19.8955
+Eucl. dist. from 8: 28.891
+Eucl. dist. from 9: 25.5781
+Eucl. dist. from $: 19.5842
+  =  Min. eucl. dist.: 0.201442
+
+Num of points: 259
+Eucl. dist. from 0: 7.81109
+Eucl. dist. from 1: 29.1461
+Eucl. dist. from 2: 0.00365688
+Eucl. dist. from 3: 1.96217
+Eucl. dist. from 4: 137.168
+Eucl. dist. from 5: 9.08453
+Eucl. dist. from 6: 5.83619
+Eucl. dist. from 7: 9.37069
+Eucl. dist. from 8: 0.154066
+Eucl. dist. from 9: 3.63708
+Eucl. dist. from $: 9.37094
+  =  Min. eucl. dist.: 0.00365688
+
+Num of points: 265
+Eucl. dist. from 0: 9.70024
+Eucl. dist. from 1: 31.0403
+Eucl. dist. from 2: 1.9593
+Eucl. dist. from 3: 0.00175553
+Eucl. dist. from 4: 139.112
+Eucl. dist. from 5: 11.0271
+Eucl. dist. from 6: 7.79767
+Eucl. dist. from 7: 11.3308
+Eucl. dist. from 8: 2.0594
+Eucl. dist. from 9: 5.59477
+Eucl. dist. from $: 11.2877
+  =  Min. eucl. dist.: 0.00175553
+
+Num of points: 233
+Eucl. dist. from 0: 134.498
+Eucl. dist. from 1: 113.379
+Eucl. dist. from 2: 142.196
+Eucl. dist. from 3: 144.136
+Eucl. dist. from 4: 5.02634
+Eucl. dist. from 5: 133.533
+Eucl. dist. from 6: 136.456
+Eucl. dist. from 7: 132.856
+Eucl. dist. from 8: 142.118
+Eucl. dist. from 9: 138.652
+Eucl. dist. from $: 132.871
+  =  Min. eucl. dist.: 5.02634
+
+Num of points: 357
+Eucl. dist. from 0: 4.08174
+Eucl. dist. from 1: 21.2466
+Eucl. dist. from 2: 9.07888
+Eucl. dist. from 3: 11.0175
+Eucl. dist. from 4: 128.515
+Eucl. dist. from 5: 0.00926492
+Eucl. dist. from 6: 3.34759
+Eucl. dist. from 7: 2.00002
+Eucl. dist. from 8: 8.96476
+Eucl. dist. from 9: 5.45254
+Eucl. dist. from $: 3.64621
+  =  Min. eucl. dist.: 0.00926492
+
+Num of points: 221
+Eucl. dist. from 0: 3.07486
+Eucl. dist. from 1: 23.6852
+Eucl. dist. from 2: 5.82117
+Eucl. dist. from 3: 7.77858
+Eucl. dist. from 4: 131.448
+Eucl. dist. from 5: 3.37406
+Eucl. dist. from 6: 0.018567
+Eucl. dist. from 7: 3.62715
+Eucl. dist. from 8: 5.72084
+Eucl. dist. from 9: 2.19137
+Eucl. dist. from $: 4.10979
+  =  Min. eucl. dist.: 0.018567
+
+Num of points: 239
+Eucl. dist. from 0: 2.61352
+Eucl. dist. from 1: 20.1534
+Eucl. dist. from 2: 9.31768
+Eucl. dist. from 3: 11.2739
+Eucl. dist. from 4: 127.887
+Eucl. dist. from 5: 1.97696
+Eucl. dist. from 6: 3.55169
+Eucl. dist. from 7: 0.057315
+Eucl. dist. from 8: 9.22919
+Eucl. dist. from 9: 5.73948
+Eucl. dist. from $: 1.70684
+  =  Min. eucl. dist.: 0.057315
+
+Num of points: 0
+
+Recognized text for J0: 
+
+
+Classifying 0
+Num of points: 122
+Char 0 features: 
+Feature 1: 0.0138057
+Feature 2: 84.7972
+Feature 3: -50.1296
+
+Classifying 1
+Num of points: 129
+Char 1 features: 
+Feature 1: 0.0150997
+Feature 2: 104.979
+Feature 3: -53.8498
+
+Classifying 2
+Num of points: 150
+Char 2 features: 
+Feature 1: 0.0307026
+Feature 2: 11.0892
+Feature 3: -14.4693
+
+Classifying 3
+Num of points: 139
+Char 3 features: 
+Feature 1: 0.0318667
+Feature 2: 10.7094
+Feature 3: -15.9563
+
+Classifying 4
+Num of points: 140
+Char 4 features: 
+Feature 1: 0.00744821
+Feature 2: 710.368
+Feature 3: -685.453
+
+Classifying 5
+Num of points: 177
+Char 5 features: 
+Feature 1: 0.0228369
+Feature 2: 31.8045
+Feature 3: -50.5722
+
+Classifying 6
+Num of points: 130
+Char 6 features: 
+Feature 1: 0.0146452
+Feature 2: 75.8672
+Feature 3: -58.7369
+
+Classifying 7
+Num of points: 141
+Char 7 features: 
+Feature 1: 0.0246817
+Feature 2: 23.7726
+Feature 3: -24.4233
+
+Classifying 8
+Num of points: 127
+Char 8 features: 
+Feature 1: 0.025193
+Feature 2: 14.5623
+Feature 3: -17.0089
+
+Classifying 9
+Num of points: 131
+Char 9 features: 
+Feature 1: 0.0123858
+Feature 2: 126.236
+Feature 3: -95.4268
+
+Classifying $
+Num of points: 138
+Char $ features: 
+Feature 1: 0.0265564
+Feature 2: 22.2863
+Feature 3: -20.6438
+
+Num of points: 138
+Eucl. dist. from 0: 68.1783
+Eucl. dist. from 1: 88.2221
+Eucl. dist. from 2: 13.7987
+Eucl. dist. from 3: 13.4133
+Eucl. dist. from 4: 955.627
+Eucl. dist. from 5: 30.1716
+Eucl. dist. from 6: 64.6745
+Eucl. dist. from 7: 2.82107
+Eucl. dist. from 8: 9.51288
+Eucl. dist. from 9: 126.983
+Eucl. dist. from $: 1.24215
+  =  Min. eucl. dist.: 1.24215
+
+Num of points: 128
+Eucl. dist. from 0: 20.3423
+Eucl. dist. from 1: 1.40625
+Eucl. dist. from 2: 101.898
+Eucl. dist. from 3: 101.663
+Eucl. dist. from 4: 874.256
+Eucl. dist. from 5: 72.8453
+Eucl. dist. from 6: 28.858
+Eucl. dist. from 7: 86.3897
+Eucl. dist. from 8: 97.7041
+Eucl. dist. from 9: 45.7452
+Eucl. dist. from $: 89.1746
+  =  Min. eucl. dist.: 1.40625
+
+Num of points: 152
+Eucl. dist. from 0: 83.779
+Eucl. dist. from 1: 103.682
+Eucl. dist. from 2: 1.96537
+Eucl. dist. from 3: 2.98867
+Eucl. dist. from 4: 971.092
+Eucl. dist. from 5: 43.4859
+Eucl. dist. from 6: 80.4112
+Eucl. dist. from 7: 18.0861
+Eucl. dist. from 8: 6.26304
+Eucl. dist. from 9: 142.713
+Eucl. dist. from $: 14.7136
+  =  Min. eucl. dist.: 1.96537
+
+Num of points: 175
+Eucl. dist. from 0: 61.1776
+Eucl. dist. from 1: 81.6972
+Eucl. dist. from 2: 28.9436
+Eucl. dist. from 3: 27.8182
+Eucl. dist. from 4: 941.761
+Eucl. dist. from 5: 12.7619
+Eucl. dist. from 6: 54.6838
+Eucl. dist. from 7: 15.741
+Eucl. dist. from 8: 25.1609
+Eucl. dist. from 9: 115.837
+Eucl. dist. from $: 19.6249
+  =  Min. eucl. dist.: 12.7619
+
+Num of points: 142
+Eucl. dist. from 0: 85.6555
+Eucl. dist. from 1: 105.565
+Eucl. dist. from 2: 3.79038
+Eucl. dist. from 3: 4.48351
+Eucl. dist. from 4: 972.828
+Eucl. dist. from 5: 44.9783
+Eucl. dist. from 6: 82.2439
+Eucl. dist. from 7: 19.8911
+Eucl. dist. from 8: 8.08541
+Eucl. dist. from 9: 144.54
+Eucl. dist. from $: 16.5746
+  =  Min. eucl. dist.: 3.79038
+
+Num of points: 135
+Eucl. dist. from 0: 70611
+Eucl. dist. from 1: 70597.9
+Eucl. dist. from 2: 70678.2
+Eucl. dist. from 3: 70677.1
+Eucl. dist. from 4: 69751.4
+Eucl. dist. from 5: 70636.6
+Eucl. dist. from 6: 70607.9
+Eucl. dist. from 7: 70663.3
+Eucl. dist. from 8: 70674.3
+Eucl. dist. from 9: 70551.3
+Eucl. dist. from $: 70667.3
+  =  Min. eucl. dist.: 69751.4
+
+Num of points: 0
+
+Recognized text for J1: Num of points: 137
+Eucl. dist. from 0: 72.3434
+Eucl. dist. from 1: 92.3223
+Eucl. dist. from 2: 9.55419
+Eucl. dist. from 3: 9.28577
+Eucl. dist. from 4: 959.897
+Eucl. dist. from 5: 33.8142
+Eucl. dist. from 6: 68.9527
+Eucl. dist. from 7: 6.86124
+Eucl. dist. from 8: 5.31311
+Eucl. dist. from 9: 131.263
+Eucl. dist. from $: 3.23252
+  =  Min. eucl. dist.: 3.23252
+
+Num of points: 141
+Eucl. dist. from 0: 62.8006
+Eucl. dist. from 1: 82.9948
+Eucl. dist. from 2: 19.595
+Eucl. dist. from 3: 19.0482
+Eucl. dist. from 4: 949.662
+Eucl. dist. from 5: 24.7629
+Eucl. dist. from 6: 58.8989
+Eucl. dist. from 7: 3.48114
+Eucl. dist. from 8: 15.2935
+Eucl. dist. from 9: 121.18
+Eucl. dist. from $: 7.19554
+  =  Min. eucl. dist.: 3.48114
+
+Num of points: 176
+Eucl. dist. from 0: 97.3173
+Eucl. dist. from 1: 93.0182
+Eucl. dist. from 2: 157.987
+Eucl. dist. from 3: 156.956
+Eucl. dist. from 4: 815.912
+Eucl. dist. from 5: 116.463
+Eucl. dist. from 6: 90.5258
+Eucl. dist. from 7: 142.801
+Eucl. dist. from 8: 153.966
+Eucl. dist. from 9: 58.5668
+Eucl. dist. from $: 146.806
+  =  Min. eucl. dist.: 58.5668
+
+Num of points: 127
+Eucl. dist. from 0: 28.9584
+Eucl. dist. from 1: 10.3619
+Eucl. dist. from 2: 110.835
+Eucl. dist. from 3: 110.548
+Eucl. dist. from 4: 864.608
+Eucl. dist. from 5: 80.1653
+Eucl. dist. from 6: 35.4247
+Eucl. dist. from 7: 95.1667
+Eucl. dist. from 8: 106.61
+Eucl. dist. from 9: 36.5078
+Eucl. dist. from $: 98.0733
+  =  Min. eucl. dist.: 10.3619
+
+Num of points: 152
+Eucl. dist. from 0: 82.4276
+Eucl. dist. from 1: 102.342
+Eucl. dist. from 2: 0.638847
+Eucl. dist. from 3: 2.02389
+Eucl. dist. from 4: 969.75
+Eucl. dist. from 5: 42.2618
+Eucl. dist. from 6: 79.0483
+Eucl. dist. from 7: 16.7283
+Eucl. dist. from 8: 4.90447
+Eucl. dist. from 9: 141.351
+Eucl. dist. from $: 13.3528
+  =  Min. eucl. dist.: 0.638847
+
+Num of points: 0
+
+Recognized text for J2: Num of points: 136
+Eucl. dist. from 0: 75.2327
+Eucl. dist. from 1: 95.1649
+Eucl. dist. from 2: 6.65172
+Eucl. dist. from 3: 6.56708
+Eucl. dist. from 4: 962.868
+Eucl. dist. from 5: 36.455
+Eucl. dist. from 6: 71.9225
+Eucl. dist. from 7: 9.80195
+Eucl. dist. from 8: 2.60384
+Eucl. dist. from 9: 134.235
+Eucl. dist. from $: 6.18237
+  =  Min. eucl. dist.: 2.60384
+
+Num of points: 150
+Eucl. dist. from 0: 84.4994
+Eucl. dist. from 1: 104.39
+Eucl. dist. from 2: 2.71688
+Eucl. dist. from 3: 3.68145
+Eucl. dist. from 4: 971.843
+Eucl. dist. from 5: 44.2074
+Eucl. dist. from 6: 81.1551
+Eucl. dist. from 7: 18.8357
+Eucl. dist. from 8: 7.01211
+Eucl. dist. from 9: 143.459
+Eucl. dist. from $: 15.4487
+  =  Min. eucl. dist.: 2.71688
+
+Num of points: 176
+Eucl. dist. from 0: 47.0639
+Eucl. dist. from 1: 59.2949
+Eucl. dist. from 2: 85.7575
+Eucl. dist. from 3: 84.6987
+Eucl. dist. from 4: 886.365
+Eucl. dist. from 5: 44.175
+Eucl. dist. from 6: 34.8463
+Eucl. dist. from 7: 70.8449
+Eucl. dist. from 8: 81.7884
+Eucl. dist. from 9: 70.5648
+Eucl. dist. from $: 74.8872
+  =  Min. eucl. dist.: 34.8463
+
+Num of points: 130
+Eucl. dist. from 0: 6.44319
+Eucl. dist. from 1: 26.9564
+Eucl. dist. from 2: 75.8126
+Eucl. dist. from 3: 75.4805
+Eucl. dist. from 4: 896.666
+Eucl. dist. from 5: 46.613
+Eucl. dist. from 6: 9.72379
+Eucl. dist. from 7: 60.0467
+Eucl. dist. from 8: 71.5635
+Eucl. dist. from 9: 66.4177
+Eucl. dist. from $: 63.0311
+  =  Min. eucl. dist.: 6.44319
+
+Num of points: 139
+Eucl. dist. from 0: 83.3787
+Eucl. dist. from 1: 103.34
+Eucl. dist. from 2: 1.60117
+Eucl. dist. from 3: 2.02802
+Eucl. dist. from 4: 970.375
+Eucl. dist. from 5: 42.5564
+Eucl. dist. from 6: 79.8569
+Eucl. dist. from 7: 17.4843
+Eucl. dist. from 8: 5.73151
+Eucl. dist. from 9: 142.144
+Eucl. dist. from $: 14.2644
+  =  Min. eucl. dist.: 1.60117
+
+Num of points: 0
+
+Recognized text for J3: Num of points: 137
+Eucl. dist. from 0: 78.3939
+Eucl. dist. from 1: 98.3146
+Eucl. dist. from 2: 3.50261
+Eucl. dist. from 3: 3.66787
+Eucl. dist. from 4: 965.911
+Eucl. dist. from 5: 38.988
+Eucl. dist. from 6: 75.0617
+Eucl. dist. from 7: 12.827
+Eucl. dist. from 8: 1.32294
+Eucl. dist. from 9: 137.371
+Eucl. dist. from $: 9.33441
+  =  Min. eucl. dist.: 1.32294
+
+Num of points: 128
+Eucl. dist. from 0: 2.96288
+Eucl. dist. from 1: 18.8919
+Eucl. dist. from 2: 84.2446
+Eucl. dist. from 3: 83.9199
+Eucl. dist. from 4: 888.798
+Eucl. dist. from 5: 54.3583
+Eucl. dist. from 6: 11.8549
+Eucl. dist. from 7: 68.4919
+Eucl. dist. from 8: 79.9994
+Eucl. dist. from 9: 58.5498
+Eucl. dist. from $: 71.4656
+  =  Min. eucl. dist.: 2.96288
+
+Num of points: 152
+Eucl. dist. from 0: 83.5504
+Eucl. dist. from 1: 103.444
+Eucl. dist. from 2: 1.80835
+Eucl. dist. from 3: 2.95937
+Eucl. dist. from 4: 970.93
+Eucl. dist. from 5: 43.3975
+Eucl. dist. from 6: 80.2123
+Eucl. dist. from 7: 17.9038
+Eucl. dist. from 8: 6.08066
+Eucl. dist. from 9: 142.517
+Eucl. dist. from $: 14.501
+  =  Min. eucl. dist.: 1.80835
+
+Num of points: 140
+Eucl. dist. from 0: 82.547
+Eucl. dist. from 1: 102.538
+Eucl. dist. from 2: 1.30725
+Eucl. dist. from 3: 1.03401
+Eucl. dist. from 4: 969.406
+Eucl. dist. from 5: 41.5506
+Eucl. dist. from 6: 78.9516
+Eucl. dist. from 7: 16.572
+Eucl. dist. from 8: 4.9035
+Eucl. dist. from 9: 141.231
+Eucl. dist. from $: 13.434
+  =  Min. eucl. dist.: 1.03401
+
+Num of points: 138
+Eucl. dist. from 0: 174.261
+Eucl. dist. from 1: 158.295
+Eucl. dist. from 2: 252.281
+Eucl. dist. from 3: 251.61
+Eucl. dist. from 4: 717.453
+Eucl. dist. from 5: 213.569
+Eucl. dist. from 6: 174.456
+Eucl. dist. from 7: 236.171
+Eucl. dist. from 8: 247.99
+Eucl. dist. from 9: 112.871
+Eucl. dist. from $: 239.765
+  =  Min. eucl. dist.: 112.871
+
+Num of points: 0
+
+Recognized text for J4: 

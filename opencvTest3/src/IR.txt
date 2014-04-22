@@ -1,0 +1,5 @@
+0, 388, 319, 828, 427, 2, Jackpot Value 0
+1, 205, 485, 468, 562, 1, Jackpot Value 1
+2, 690, 485, 954, 560, 1, Jackpot Value 2
+3, 204, 607, 468, 684, 1, Jackpot Value 3
+4, 689, 608, 954, 685, 1, Jackpot Value 4
