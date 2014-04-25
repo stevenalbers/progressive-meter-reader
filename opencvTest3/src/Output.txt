@@ -1,7 +1,6 @@
-Region Name       Meter Value
-
-Green Gem         $12,345.67
-Red Gem           $125.24
-Orange Gem        $79.12
-Blue Gem          826.02
-Purple Gem        802.39
+Region Name|Meter Value
+Jackpot Value 0|$4,113.96
+Jackpot Value 1|$219.08
+Jackpot Value 2|$1,002.18
+Jackpot Value 3|$46.35
+Jackpot Value 4|$88.92

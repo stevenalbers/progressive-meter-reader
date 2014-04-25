@@ -5,576 +5,2420 @@ Number of feature moments: 3
 
 
 Classifying 0
-Num of points: 206
-Char 0 features: 
-Feature 1: 0.0151422
-Feature 2: 11.8848
-Feature 3: -13.1966
+Num of points: 272
+-------------------------------------
+21.5658
+20.6134
+20.709
+20.8521
+21.0419
+21.277
+21.556
+22.8196
+23.1664
+23.5507
+23.9705
+
+
+-------------------------------------
+        Central 0: 0.267668
+        Central 1: -0.286229
+        Central 2: 1.57473
+        Central 3: -0.933581
+Feature 0: 0.0148493
+Feature 1: 10.2833
+Feature 2: -11.3952
 
 Classifying 1
-Num of points: 213
-Char 1 features: 
-Feature 1: 0.0143828
-Feature 2: 28.6984
-Feature 3: -26.3394
+Num of points: 276
+-------------------------------------
+6.42309
+7.34094
+8.27784
+9.228
+10.1877
+11.1545
+12.1267
+13.3468
+14.3098
+15.065
+16.0496
+
+
+-------------------------------------
+        Central 0: 0.465156
+        Central 1: -0.353111
+        Central 2: 1.87087
+        Central 3: -1.39612
+Feature 0: 0.0199534
+Feature 1: 8.91612
+Feature 2: -11.197
 
 Classifying 2
-Num of points: 259
-Char 2 features: 
-Feature 1: 0.0234757
-Feature 2: 5.51763
-Feature 3: -8.66681
+Num of points: 393
+-------------------------------------
+3.51483
+3.82417
+3.60287
+3.0111
+1.6978
+1.72296
+2.24826
+3.02337
+3.90215
+5.25197
+5.81837
+
+
+-------------------------------------
+        Central 0: 0.446306
+        Central 1: -0.390761
+        Central 2: 1.97525
+        Central 3: -1.74628
+Feature 0: 0.0201635
+Feature 1: 8.0864
+Feature 2: -11.4364
 
 Classifying 3
-Num of points: 265
-Char 3 features: 
-Feature 1: 0.0275382
-Feature 2: 4.33936
-Feature 3: -7.10215
+Num of points: 409
+-------------------------------------
+10.6697
+10.8024
+11.0246
+11.331
+11.715
+12.1693
+12.6863
+13.2586
+14.6595
+14.5427
+14.5631
+
+
+-------------------------------------
+        Central 0: 0.424618
+        Central 1: -0.399662
+        Central 2: 1.97053
+        Central 3: -1.6957
+Feature 0: 0.0205244
+Feature 1: 7.79908
+Feature 2: -10.616
 
 Classifying 4
-Num of points: 233
-Char 4 features: 
-Feature 1: 0.00861138
-Feature 2: 102.352
-Feature 3: -105.821
+Num of points: 266
+-------------------------------------
+24.3858
+23.5039
+23.6597
+23.8563
+24.0929
+24.3683
+25.6269
+25.9631
+26.333
+26.7353
+26.2782
+
+
+-------------------------------------
+        Central 0: 0.332678
+        Central 1: 0.371335
+        Central 2: 2.37276
+        Central 3: 1.42384
+Feature 0: 0.0210988
+Feature 1: 10.4859
+Feature 2: 10.3259
 
 Classifying 5
-Num of points: 357
-Char 5 features: 
-Feature 1: 0.0225102
-Feature 2: 9.77442
-Feature 3: -16.6964
+Num of points: 409
+-------------------------------------
+22.032
+21.0504
+20.1204
+20.2387
+20.4053
+20.6192
+20.8788
+22.1305
+22.4618
+22.8321
+23.2396
+
+
+-------------------------------------
+        Central 0: 0.406528
+        Central 1: -0.334108
+        Central 2: 2.04215
+        Central 3: -1.74817
+Feature 0: 0.0182935
+Feature 1: 10.5744
+Feature 2: -15.6606
 
 Classifying 6
-Num of points: 221
-Char 6 features: 
-Feature 1: 0.0181964
-Feature 2: 8.83246
-Feature 3: -13.4745
+Num of points: 351
+-------------------------------------
+21.2848
+20.1533
+20.0569
+20.01
+20.0131
+20.0661
+21.1608
+21.305
+21.4948
+21.729
+21.0538
+
+
+-------------------------------------
+        Central 0: 0.375457
+        Central 1: -0.125074
+        Central 2: 2.21651
+        Central 3: -0.978506
+Feature 0: 0.0109274
+Feature 1: 50.1098
+Feature 2: -62.5508
 
 Classifying 7
-Num of points: 239
-Char 7 features: 
-Feature 1: 0.0191904
-Feature 2: 11.5734
-Feature 3: -15.8223
+Num of points: 317
+-------------------------------------
+9.25693
+8.33057
+7.0351
+7.75704
+7.65235
+7.67757
+7.83146
+8.1067
+8.49148
+8.13631
+7.34215
+
+
+-------------------------------------
+        Central 0: 0.44513
+        Central 1: 0.231127
+        Central 2: 2.35713
+        Central 3: 1.36954
+Feature 0: 0.0168035
+Feature 1: 21.2132
+Feature 2: 25.6374
 
 Classifying 8
-Num of points: 210
-Char 8 features: 
-Feature 1: 0.0212038
-Feature 2: 5.47664
-Feature 3: -8.81844
+Num of points: 291
+-------------------------------------
+14.3893
+14.466
+14.6109
+14.8219
+15.0965
+15.431
+16.7357
+17.6589
+18.59
+19.528
+20.4718
+
+
+-------------------------------------
+        Central 0: 0.324663
+        Central 1: -0.366215
+        Central 2: 1.74601
+        Central 3: -1.46696
+Feature 0: 0.0175866
+Feature 1: 7.87851
+Feature 2: -10.9382
 
 Classifying 9
-Num of points: 219
-Char 9 features: 
-Feature 1: 0.0192169
-Feature 2: 7.43968
-Feature 3: -11.7587
+Num of points: 345
+-------------------------------------
+22.915
+23.1911
+22.5667
+22.9344
+23.3392
+23.7791
+24.2524
+25.6166
+26.1332
+26.6772
+27.2471
+
+
+-------------------------------------
+        Central 0: 0.377955
+        Central 1: -0.14949
+        Central 2: 2.28339
+        Central 3: -1.17182
+Feature 0: 0.0118873
+Feature 1: 39.5058
+Feature 2: -52.4368
 
 Classifying $
-Num of points: 226
-Char $ features: 
-Feature 1: 0.02005
-Feature 2: 12.7667
-Feature 3: -14.6102
+Num of points: 239
+-------------------------------------
+21.5512
+20.1404
+20.2914
+19.7075
+19.158
+18.646
+18.1746
+16.8375
+16.4361
+17.0367
+16.7599
 
-Num of points: 226
-Eucl. dist. from 0: 1.67772
-Eucl. dist. from 1: 19.7719
-Eucl. dist. from 2: 9.38588
-Eucl. dist. from 3: 11.2986
-Eucl. dist. from 4: 127.836
-Eucl. dist. from 5: 3.64988
-Eucl. dist. from 6: 4.10531
-Eucl. dist. from 7: 1.70099
-Eucl. dist. from 8: 9.32253
-Eucl. dist. from 9: 6.05357
-Eucl. dist. from $: 0.0118812
-  =  Min. eucl. dist.: 0.0118812
 
-Num of points: 213
-Eucl. dist. from 0: 21.1422
-Eucl. dist. from 1: 0.201442
-Eucl. dist. from 2: 28.9501
-Eucl. dist. from 3: 30.8408
-Eucl. dist. from 4: 108.552
-Eucl. dist. from 5: 21.0379
-Eucl. dist. from 6: 23.4669
-Eucl. dist. from 7: 19.8955
-Eucl. dist. from 8: 28.891
-Eucl. dist. from 9: 25.5781
-Eucl. dist. from $: 19.5842
-  =  Min. eucl. dist.: 0.201442
-
-Num of points: 259
-Eucl. dist. from 0: 7.81109
-Eucl. dist. from 1: 29.1461
-Eucl. dist. from 2: 0.00365688
-Eucl. dist. from 3: 1.96217
-Eucl. dist. from 4: 137.168
-Eucl. dist. from 5: 9.08453
-Eucl. dist. from 6: 5.83619
-Eucl. dist. from 7: 9.37069
-Eucl. dist. from 8: 0.154066
-Eucl. dist. from 9: 3.63708
-Eucl. dist. from $: 9.37094
-  =  Min. eucl. dist.: 0.00365688
-
-Num of points: 265
-Eucl. dist. from 0: 9.70024
-Eucl. dist. from 1: 31.0403
-Eucl. dist. from 2: 1.9593
-Eucl. dist. from 3: 0.00175553
-Eucl. dist. from 4: 139.112
-Eucl. dist. from 5: 11.0271
-Eucl. dist. from 6: 7.79767
-Eucl. dist. from 7: 11.3308
-Eucl. dist. from 8: 2.0594
-Eucl. dist. from 9: 5.59477
-Eucl. dist. from $: 11.2877
-  =  Min. eucl. dist.: 0.00175553
+-------------------------------------
+        Central 0: 0.420038
+        Central 1: -0.298141
+        Central 2: 2.27185
+        Central 3: -1.24107
+Feature 0: 0.0336898
+Feature 1: 13.9556
+Feature 2: -13.9622
 
 Num of points: 233
-Eucl. dist. from 0: 134.498
-Eucl. dist. from 1: 113.379
-Eucl. dist. from 2: 142.196
-Eucl. dist. from 3: 144.136
-Eucl. dist. from 4: 5.02634
-Eucl. dist. from 5: 133.533
-Eucl. dist. from 6: 136.456
-Eucl. dist. from 7: 132.856
-Eucl. dist. from 8: 142.118
-Eucl. dist. from 9: 138.652
-Eucl. dist. from $: 132.871
-  =  Min. eucl. dist.: 5.02634
+-------------------------------------
+22.2225
+21.4699
+20.0576
+20.185
+19.5876
+19.024
+18.4974
+18.0109
+16.6658
+16.2477
+16.826
 
-Num of points: 357
-Eucl. dist. from 0: 4.08174
-Eucl. dist. from 1: 21.2466
-Eucl. dist. from 2: 9.07888
-Eucl. dist. from 3: 11.0175
-Eucl. dist. from 4: 128.515
-Eucl. dist. from 5: 0.00926492
-Eucl. dist. from 6: 3.34759
-Eucl. dist. from 7: 2.00002
-Eucl. dist. from 8: 8.96476
-Eucl. dist. from 9: 5.45254
-Eucl. dist. from $: 3.64621
-  =  Min. eucl. dist.: 0.00926492
 
-Num of points: 221
-Eucl. dist. from 0: 3.07486
-Eucl. dist. from 1: 23.6852
-Eucl. dist. from 2: 5.82117
-Eucl. dist. from 3: 7.77858
-Eucl. dist. from 4: 131.448
-Eucl. dist. from 5: 3.37406
-Eucl. dist. from 6: 0.018567
-Eucl. dist. from 7: 3.62715
-Eucl. dist. from 8: 5.72084
-Eucl. dist. from 9: 2.19137
-Eucl. dist. from $: 4.10979
-  =  Min. eucl. dist.: 0.018567
+-------------------------------------
+        Central 0: 0.413766
+        Central 1: -0.32768
+        Central 2: 2.31688
+        Central 3: -1.41554
+Feature 0: 0.0350022
+Feature 1: 12.3517
+Feature 2: -13.1833
+Eucl. dist. from 0: 2.73417
+Eucl. dist. from 1: 3.96851
+Eucl. dist. from 2: 4.6092
+Eucl. dist. from 3: 5.22662
+Eucl. dist. from 4: 23.5831
+Eucl. dist. from 5: 3.04903
+Eucl. dist. from 6: 62.1516
+Eucl. dist. from 7: 39.8192
+Eucl. dist. from 8: 5.00502
+Eucl. dist. from 9: 47.7303
+Eucl. dist. from $: 1.78302
+Num of points: 262
+-------------------------------------
+24.4186
+24.4917
+23.6146
+23.7745
+23.975
+24.2152
+24.4939
+25.7545
+26.0935
+26.466
+26.8705
 
-Num of points: 239
-Eucl. dist. from 0: 2.61352
-Eucl. dist. from 1: 20.1534
-Eucl. dist. from 2: 9.31768
-Eucl. dist. from 3: 11.2739
-Eucl. dist. from 4: 127.887
-Eucl. dist. from 5: 1.97696
-Eucl. dist. from 6: 3.55169
-Eucl. dist. from 7: 0.057315
-Eucl. dist. from 8: 9.22919
-Eucl. dist. from 9: 5.73948
-Eucl. dist. from $: 1.70684
-  =  Min. eucl. dist.: 0.057315
 
+-------------------------------------
+        Central 0: 0.330814
+        Central 1: 0.372423
+        Central 2: 2.33072
+        Central 3: 1.39811
+Feature 0: 0.020959
+Feature 1: 10.255
+Feature 2: 10.0802
+Eucl. dist. from 0: 21.4755
+Eucl. dist. from 1: 21.3193
+Eucl. dist. from 2: 21.6257
+Eucl. dist. from 3: 20.8415
+Eucl. dist. from 4: 0.337167
+Eucl. dist. from 5: 25.7429
+Eucl. dist. from 6: 82.8472
+Eucl. dist. from 7: 19.0292
+Eucl. dist. from 8: 21.1524
+Eucl. dist. from 9: 69.0217
+Eucl. dist. from $: 24.3256
+Num of points: 276
+-------------------------------------
+6.14266
+6.49583
+7.418
+8.3581
+9.31068
+10.2723
+11.2406
+12.214
+13.4306
+14.3948
+15.155
+
+
+-------------------------------------
+        Central 0: 0.465396
+        Central 1: -0.353141
+        Central 2: 1.88011
+        Central 3: -1.39691
+Feature 0: 0.0199677
+Feature 1: 8.95905
+Feature 2: -11.2014
+Eucl. dist. from 0: 1.33841
+Eucl. dist. from 1: 0.0431631
+Eucl. dist. from 2: 0.903732
+Eucl. dist. from 3: 1.29932
+Eucl. dist. from 4: 21.5814
+Eucl. dist. from 5: 4.74279
+Eucl. dist. from 6: 65.8038
+Eucl. dist. from 7: 38.8235
+Eucl. dist. from 8: 1.11213
+Eucl. dist. from 9: 51.3173
+Eucl. dist. from $: 5.70856
+Num of points: 279
+-------------------------------------
+6.27351
+6.64446
+7.5701
+8.51257
+9.46686
+10.4297
+11.399
+12.3731
+13.3511
+14.3321
+15.3156
+
+
+-------------------------------------
+        Central 0: 0.461486
+        Central 1: -0.345493
+        Central 2: 1.88729
+        Central 3: -1.37508
+Feature 0: 0.0197621
+Feature 1: 9.29348
+Feature 2: -11.5199
+Eucl. dist. from 0: 0.997696
+Eucl. dist. from 1: 0.496692
+Eucl. dist. from 2: 1.20996
+Eucl. dist. from 3: 1.7465
+Eucl. dist. from 4: 21.8784
+Eucl. dist. from 5: 4.33435
+Eucl. dist. from 6: 65.3461
+Eucl. dist. from 7: 39.0224
+Eucl. dist. from 8: 1.52986
+Eucl. dist. from 9: 50.8623
+Eucl. dist. from $: 5.26312
+Num of points: 411
+-------------------------------------
+10.4582
+10.4755
+10.5877
+10.7917
+11.0826
+11.4537
+11.8975
+12.4061
+13.7906
+14.3717
+14.9969
+
+
+-------------------------------------
+        Central 0: 0.420214
+        Central 1: -0.400746
+        Central 2: 1.97809
+        Central 3: -1.67912
+Feature 0: 0.0204666
+Feature 1: 7.79729
+Feature 2: -10.4555
+Eucl. dist. from 0: 2.65775
+Eucl. dist. from 1: 1.34222
+Eucl. dist. from 2: 1.02267
+Eucl. dist. from 3: 0.160552
+Eucl. dist. from 4: 20.9546
+Eucl. dist. from 5: 5.89969
+Eucl. dist. from 6: 67.1138
+Eucl. dist. from 7: 38.5056
+Eucl. dist. from 8: 0.489542
+Eucl. dist. from 9: 52.6105
+Eucl. dist. from $: 7.08676
+Num of points: 348
+-------------------------------------
+21.3157
+21.1328
+20.0028
+19.9085
+19.8642
+19.8702
+19.9264
+21.0242
+21.1721
+21.3657
+21.6039
+
+
+-------------------------------------
+        Central 0: 0.375265
+        Central 1: -0.139495
+        Central 2: 2.20419
+        Central 3: -1.02752
+Feature 0: 0.0115189
+Feature 1: 42.3068
+Feature 2: -52.8045
+Eucl. dist. from 0: 52.3472
+Eucl. dist. from 1: 53.3491
+Eucl. dist. from 2: 53.6876
+Eucl. dist. from 3: 54.5037
+Eucl. dist. from 4: 70.6967
+Eucl. dist. from 5: 48.8529
+Eucl. dist. from 6: 12.485
+Eucl. dist. from 7: 81.2285
+Eucl. dist. from 8: 54.2042
+Eucl. dist. from 9: 2.82503
+Eucl. dist. from $: 48.0886
+Num of points: 346
+-------------------------------------
+21.1893
+20.9942
+20.8452
+20.7435
+20.6896
+20.6841
+20.7268
+20.8175
+21.943
+21.1401
+21.3699
+
+
+-------------------------------------
+        Central 0: 0.376061
+        Central 1: -0.128556
+        Central 2: 2.2289
+        Central 3: -1.01819
+Feature 0: 0.011027
+Feature 1: 48.3562
+Feature 2: -61.6092
+Eucl. dist. from 0: 63.0157
+Eucl. dist. from 1: 64.0071
+Eucl. dist. from 2: 64.3348
+Eucl. dist. from 3: 65.1551
+Eucl. dist. from 4: 81.2947
+Eucl. dist. from 5: 59.4872
+Eucl. dist. from 6: 1.99037
+Eucl. dist. from 7: 91.3713
+Eucl. dist. from 8: 64.8536
+Eucl. dist. from 9: 12.7461
+Eucl. dist. from $: 58.7677
 Num of points: 0
 
-Recognized text for J0: 
+Recognized text for J0: $4,113.96
 
 
 Classifying 0
-Num of points: 122
-Char 0 features: 
-Feature 1: 0.0138057
-Feature 2: 84.7972
-Feature 3: -50.1296
+Num of points: 190
+-------------------------------------
+15.1671
+14.3353
+14.5631
+14.8549
+16.1361
+16.5213
+16.9569
+16.5831
+17.1342
+17.7247
+19.1277
+
+
+-------------------------------------
+        Central 0: 0.2633
+        Central 1: -0.29696
+        Central 2: 1.58837
+        Central 3: -0.983869
+Feature 0: 0.0208462
+Feature 1: 9.8153
+Feature 2: -11.1568
 
 Classifying 1
-Num of points: 129
-Char 1 features: 
-Feature 1: 0.0150997
-Feature 2: 104.979
-Feature 3: -53.8498
+Num of points: 199
+-------------------------------------
+4.51907
+5.33841
+6.2109
+7.11702
+8.04541
+8.98917
+9.94394
+10.9068
+11.6796
+12.6685
+13.6589
+
+
+-------------------------------------
+        Central 0: 0.461062
+        Central 1: -0.340022
+        Central 2: 1.8545
+        Central 3: -1.31712
+Feature 0: 0.0271061
+Feature 1: 9.35331
+Feature 2: -11.3923
 
 Classifying 2
-Num of points: 150
-Char 2 features: 
-Feature 1: 0.0307026
-Feature 2: 11.0892
-Feature 3: -14.4693
+Num of points: 276
+-------------------------------------
+2.62949
+1.79987
+1.25093
+1.37482
+2.05315
+3.45686
+4.16642
+4.97677
+5.84614
+6.75178
+7.68087
+
+
+-------------------------------------
+        Central 0: 0.432427
+        Central 1: -0.415319
+        Central 2: 2.06221
+        Central 3: -1.97141
+Feature 0: 0.0285739
+Feature 1: 7.70479
+Feature 2: -11.4291
 
 Classifying 3
-Num of points: 139
-Char 3 features: 
-Feature 1: 0.0318667
-Feature 2: 10.7094
-Feature 3: -15.9563
+Num of points: 290
+-------------------------------------
+7.67888
+7.8197
+8.0827
+8.4565
+8.9272
+10.3048
+10.1025
+10.7816
+10.096
+8.68535
+8.06989
+
+
+-------------------------------------
+        Central 0: 0.422657
+        Central 1: -0.335112
+        Central 2: 1.95289
+        Central 3: -1.42549
+Feature 0: 0.026221
+Feature 1: 10.0668
+Feature 2: -12.6936
 
 Classifying 4
-Num of points: 140
-Char 4 features: 
-Feature 1: 0.00744821
-Feature 2: 710.368
-Feature 3: -685.453
+Num of points: 189
+-------------------------------------
+17.8361
+17.8831
+16.9948
+17.1611
+17.3835
+18.6154
+18.9265
+19.2846
+18.7859
+17.8954
+16.5498
+
+
+-------------------------------------
+        Central 0: 0.323516
+        Central 1: 0.362461
+        Central 2: 2.34371
+        Central 3: 1.34018
+Feature 0: 0.0284632
+Feature 1: 10.7402
+Feature 2: 10.2009
 
 Classifying 5
-Num of points: 177
-Char 5 features: 
-Feature 1: 0.0228369
-Feature 2: 31.8045
-Feature 3: -50.5722
+Num of points: 293
+-------------------------------------
+15.3169
+15.3934
+14.5501
+14.7668
+15.047
+16.3208
+16.6949
+17.1194
+16.7278
+17.2677
+17.8473
+
+
+-------------------------------------
+        Central 0: 0.405403
+        Central 1: -0.308764
+        Central 2: 2.09226
+        Central 3: -1.77358
+Feature 0: 0.0245263
+Feature 1: 12.1949
+Feature 2: -18.6036
 
 Classifying 6
-Num of points: 130
-Char 6 features: 
-Feature 1: 0.0146452
-Feature 2: 75.8672
-Feature 3: -58.7369
+Num of points: 248
+-------------------------------------
+15.3928
+15.2323
+15.1364
+15.1061
+15.142
+15.2436
+15.4095
+15.6377
+14.9803
+15.3459
+15.7665
+
+
+-------------------------------------
+        Central 0: 0.375872
+        Central 1: -0.148795
+        Central 2: 2.19049
+        Central 3: -1.09273
+Feature 0: 0.0165391
+Feature 1: 38.1643
+Feature 2: -49.3554
 
 Classifying 7
-Num of points: 141
-Char 7 features: 
-Feature 1: 0.0246817
-Feature 2: 23.7726
-Feature 3: -24.4233
+Num of points: 225
+-------------------------------------
+8.18445
+7.24546
+6.32519
+5.43318
+5.02232
+4.78832
+4.75735
+4.93322
+4.4218
+3.61438
+2.92834
+
+
+-------------------------------------
+        Central 0: 0.44831
+        Central 1: 0.178111
+        Central 2: 2.31862
+        Central 3: 0.999998
+Feature 0: 0.0205765
+Feature 1: 30.8457
+Feature 2: 31.5223
 
 Classifying 8
-Num of points: 127
-Char 8 features: 
-Feature 1: 0.025193
-Feature 2: 14.5623
-Feature 3: -17.0089
+Num of points: 202
+-------------------------------------
+10.6856
+10.8716
+11.1446
+12.4245
+13.3614
+14.3068
+15.2592
+16.2173
+16.5231
+16.8826
+17.2925
+
+
+-------------------------------------
+        Central 0: 0.318624
+        Central 1: -0.360649
+        Central 2: 1.73147
+        Central 3: -1.4585
+Feature 0: 0.0240634
+Feature 1: 7.99445
+Feature 2: -11.2134
 
 Classifying 9
-Num of points: 131
-Char 9 features: 
-Feature 1: 0.0123858
-Feature 2: 126.236
-Feature 3: -95.4268
+Num of points: 244
+-------------------------------------
+15.6284
+15.9816
+16.3883
+16.8447
+18.2062
+18.7252
+18.4727
+19.0895
+19.7376
+20.4142
+21.828
+
+
+-------------------------------------
+        Central 0: 0.379377
+        Central 1: -0.110855
+        Central 2: 2.17018
+        Central 3: -0.882534
+Feature 0: 0.0143123
+Feature 1: 58.798
+Feature 2: -71.8159
 
 Classifying $
-Num of points: 138
-Char $ features: 
-Feature 1: 0.0265564
-Feature 2: 22.2863
-Feature 3: -20.6438
+Num of points: 174
+-------------------------------------
+15.4903
+14.0774
+14.212
+13.6381
+13.1154
+12.6502
+11.3249
+11.9189
+11.6652
+11.4931
+11.4065
 
-Num of points: 138
-Eucl. dist. from 0: 68.1783
-Eucl. dist. from 1: 88.2221
-Eucl. dist. from 2: 13.7987
-Eucl. dist. from 3: 13.4133
-Eucl. dist. from 4: 955.627
-Eucl. dist. from 5: 30.1716
-Eucl. dist. from 6: 64.6745
-Eucl. dist. from 7: 2.82107
-Eucl. dist. from 8: 9.51288
-Eucl. dist. from 9: 126.983
-Eucl. dist. from $: 1.24215
-  =  Min. eucl. dist.: 1.24215
 
-Num of points: 128
-Eucl. dist. from 0: 20.3423
-Eucl. dist. from 1: 1.40625
-Eucl. dist. from 2: 101.898
-Eucl. dist. from 3: 101.663
-Eucl. dist. from 4: 874.256
-Eucl. dist. from 5: 72.8453
-Eucl. dist. from 6: 28.858
-Eucl. dist. from 7: 86.3897
-Eucl. dist. from 8: 97.7041
-Eucl. dist. from 9: 45.7452
-Eucl. dist. from $: 89.1746
-  =  Min. eucl. dist.: 1.40625
-
-Num of points: 152
-Eucl. dist. from 0: 83.779
-Eucl. dist. from 1: 103.682
-Eucl. dist. from 2: 1.96537
-Eucl. dist. from 3: 2.98867
-Eucl. dist. from 4: 971.092
-Eucl. dist. from 5: 43.4859
-Eucl. dist. from 6: 80.4112
-Eucl. dist. from 7: 18.0861
-Eucl. dist. from 8: 6.26304
-Eucl. dist. from 9: 142.713
-Eucl. dist. from $: 14.7136
-  =  Min. eucl. dist.: 1.96537
+-------------------------------------
+        Central 0: 0.415789
+        Central 1: -0.279012
+        Central 2: 2.32488
+        Central 3: -1.17496
+Feature 0: 0.0451171
+Feature 1: 15.7749
+Feature 2: -15.0931
 
 Num of points: 175
-Eucl. dist. from 0: 61.1776
-Eucl. dist. from 1: 81.6972
-Eucl. dist. from 2: 28.9436
-Eucl. dist. from 3: 27.8182
-Eucl. dist. from 4: 941.761
-Eucl. dist. from 5: 12.7619
-Eucl. dist. from 6: 54.6838
-Eucl. dist. from 7: 15.741
-Eucl. dist. from 8: 25.1609
-Eucl. dist. from 9: 115.837
-Eucl. dist. from $: 19.6249
-  =  Min. eucl. dist.: 12.7619
+-------------------------------------
+11.2817
+11.8721
+11.6161
+11.4419
+11.3536
+11.3529
+11.44
+11.6129
+10.9161
+9.97375
+9.04385
 
+
+-------------------------------------
+        Central 0: 0.414289
+        Central 1: -0.290607
+        Central 2: 2.33092
+        Central 3: -1.23127
+Feature 0: 0.0459712
+Feature 1: 14.8788
+Feature 2: -14.5795
+Eucl. dist. from 0: 6.11187
+Eucl. dist. from 1: 6.37885
+Eucl. dist. from 2: 7.83531
+Eucl. dist. from 3: 5.16842
+Eucl. dist. from 4: 25.1237
+Eucl. dist. from 5: 4.83711
+Eucl. dist. from 6: 41.8519
+Eucl. dist. from 7: 48.7886
+Eucl. dist. from 8: 7.66329
+Eucl. dist. from 9: 72.145
+Eucl. dist. from $: 1.0328
+Num of points: 276
+-------------------------------------
+3.41579
+4.11902
+4.92595
+5.79342
+6.69794
+7.62634
+8.93137
+9.38504
+9.9191
+11.3136
+12.1365
+
+
+-------------------------------------
+        Central 0: 0.432508
+        Central 1: -0.411663
+        Central 2: 2.06432
+        Central 3: -1.96127
+Feature 0: 0.0284571
+Feature 1: 7.81564
+Feature 2: -11.5732
+Eucl. dist. from 0: 2.04258
+Eucl. dist. from 1: 1.54828
+Eucl. dist. from 2: 0.181812
+Eucl. dist. from 3: 2.51455
+Eucl. dist. from 4: 21.9697
+Eucl. dist. from 5: 8.28277
+Eucl. dist. from 6: 48.4617
+Eucl. dist. from 7: 48.8632
+Eucl. dist. from 8: 0.401866
+Eucl. dist. from 9: 78.9201
+Eucl. dist. from $: 8.70282
+Num of points: 292
+-------------------------------------
+7.96836
+8.26829
+8.67378
+9.17084
+10.5562
+10.3848
+11.0776
+10.4045
+8.99581
+8.39434
+7.87434
+
+
+-------------------------------------
+        Central 0: 0.420842
+        Central 1: -0.355402
+        Central 2: 1.96869
+        Central 3: -1.53585
+Feature 0: 0.0269591
+Feature 1: 9.29175
+Feature 2: -12.1593
+Eucl. dist. from 0: 1.13097
+Eucl. dist. from 1: 0.769412
+Eucl. dist. from 2: 1.74688
+Eucl. dist. from 3: 0.941372
+Eucl. dist. from 4: 22.4071
+Eucl. dist. from 5: 7.06808
+Eucl. dist. from 6: 47.0869
+Eucl. dist. from 7: 48.7099
+Eucl. dist. from 8: 1.60554
+Eucl. dist. from 9: 77.5228
+Eucl. dist. from $: 7.11607
+Num of points: 244
+-------------------------------------
+15.9522
+16.3591
+16.8157
+18.1774
+18.6967
+18.4449
+19.062
+19.7106
+20.3877
+21.8015
+22.5045
+
+
+-------------------------------------
+        Central 0: 0.379249
+        Central 1: -0.111775
+        Central 2: 2.16887
+        Central 3: -0.885337
+Feature 0: 0.0143706
+Feature 1: 58.0388
+Feature 2: -70.8632
+Eucl. dist. from 0: 76.7487
+Eucl. dist. from 1: 76.8574
+Eucl. dist. from 2: 77.884
+Eucl. dist. from 3: 75.3991
+Eucl. dist. from 4: 93.8539
+Eucl. dist. from 5: 69.5178
+Eucl. dist. from 6: 29.2844
+Eucl. dist. from 7: 105.935
+Eucl. dist. from 8: 77.8623
+Eucl. dist. from 9: 1.21821
+Eucl. dist. from $: 69.9753
+Num of points: 190
+-------------------------------------
+14.3143
+14.5214
+14.7934
+16.0627
+16.4311
+16.851
+16.454
+16.9914
+17.5693
+18.9696
+19.5913
+
+
+-------------------------------------
+        Central 0: 0.263808
+        Central 1: -0.298265
+        Central 2: 1.58254
+        Central 3: -0.989326
+Feature 0: 0.0208865
+Feature 1: 9.71519
+Feature 2: -11.1208
+Eucl. dist. from 0: 0.106404
+Eucl. dist. from 1: 0.452492
+Eucl. dist. from 2: 2.03393
+Eucl. dist. from 3: 1.61163
+Eucl. dist. from 4: 21.3463
+Eucl. dist. from 5: 7.88304
+Eucl. dist. from 6: 47.6576
+Eucl. dist. from 7: 47.5913
+Eucl. dist. from 8: 1.72323
+Eucl. dist. from 9: 78.0578
+Eucl. dist. from $: 7.24568
+Num of points: 202
+-------------------------------------
+10.8542
+11.128
+12.4085
+13.3451
+14.2903
+15.2425
+16.2004
+16.5067
+16.8668
+17.2774
+17.7349
+
+
+-------------------------------------
+        Central 0: 0.318596
+        Central 1: -0.361612
+        Central 2: 1.73164
+        Central 3: -1.46074
+Feature 0: 0.0240929
+Feature 1: 7.96332
+Feature 2: -11.1709
+Eucl. dist. from 0: 1.85204
+Eucl. dist. from 1: 1.40753
+Eucl. dist. from 2: 0.365463
+Eucl. dist. from 3: 2.5968
+Eucl. dist. from 4: 21.5515
+Eucl. dist. from 5: 8.55291
+Eucl. dist. from 6: 48.6843
+Eucl. dist. from 7: 48.4388
+Eucl. dist. from 8: 0.052692
+Eucl. dist. from 9: 79.1327
+Eucl. dist. from $: 8.74099
+Num of points: 0
+
+Recognized text for J1: $219.08
+
+
+Classifying 0
+Num of points: 133
+-------------------------------------
+8.62759
+8.50706
+8.50324
+8.61626
+8.84165
+9.17113
+9.59398
+10.0985
+10.6731
+11.307
+11.991
+
+
+-------------------------------------
+        Central 0: 0.357024
+        Central 1: -0.0973366
+        Central 2: 1.52928
+        Central 3: -0.325347
+Feature 0: 0.0170841
+Feature 1: 50.3586
+Feature 2: -34.3395
+
+Classifying 1
 Num of points: 142
-Eucl. dist. from 0: 85.6555
-Eucl. dist. from 1: 105.565
-Eucl. dist. from 2: 3.79038
-Eucl. dist. from 3: 4.48351
-Eucl. dist. from 4: 972.828
-Eucl. dist. from 5: 44.9783
-Eucl. dist. from 6: 82.2439
-Eucl. dist. from 7: 19.8911
-Eucl. dist. from 8: 8.08541
-Eucl. dist. from 9: 144.54
-Eucl. dist. from $: 16.5746
-  =  Min. eucl. dist.: 3.79038
+-------------------------------------
+1.13656
+1.7262
+2.5822
+3.51507
+4.47702
+5.45268
+6.43581
+7.42345
+8.41402
+9.40658
+10.4006
 
-Num of points: 135
-Eucl. dist. from 0: 70611
-Eucl. dist. from 1: 70597.9
-Eucl. dist. from 2: 70678.2
-Eucl. dist. from 3: 70677.1
-Eucl. dist. from 4: 69751.4
-Eucl. dist. from 5: 70636.6
-Eucl. dist. from 6: 70607.9
-Eucl. dist. from 7: 70663.3
-Eucl. dist. from 8: 70674.3
-Eucl. dist. from 9: 70551.3
-Eucl. dist. from $: 70667.3
-  =  Min. eucl. dist.: 69751.4
 
-Num of points: 0
+-------------------------------------
+        Central 0: 0.498348
+        Central 1: -0.259907
+        Central 2: 1.81954
+        Central 3: -1.04369
+Feature 0: 0.032023
+Feature 1: 13.7321
+Feature 2: -15.4503
 
-Recognized text for J1: Num of points: 137
-Eucl. dist. from 0: 72.3434
-Eucl. dist. from 1: 92.3223
-Eucl. dist. from 2: 9.55419
-Eucl. dist. from 3: 9.28577
-Eucl. dist. from 4: 959.897
-Eucl. dist. from 5: 33.8142
-Eucl. dist. from 6: 68.9527
-Eucl. dist. from 7: 6.86124
-Eucl. dist. from 8: 5.31311
-Eucl. dist. from 9: 131.263
-Eucl. dist. from $: 3.23252
-  =  Min. eucl. dist.: 3.23252
-
-Num of points: 141
-Eucl. dist. from 0: 62.8006
-Eucl. dist. from 1: 82.9948
-Eucl. dist. from 2: 19.595
-Eucl. dist. from 3: 19.0482
-Eucl. dist. from 4: 949.662
-Eucl. dist. from 5: 24.7629
-Eucl. dist. from 6: 58.8989
-Eucl. dist. from 7: 3.48114
-Eucl. dist. from 8: 15.2935
-Eucl. dist. from 9: 121.18
-Eucl. dist. from $: 7.19554
-  =  Min. eucl. dist.: 3.48114
-
+Classifying 2
 Num of points: 176
-Eucl. dist. from 0: 97.3173
-Eucl. dist. from 1: 93.0182
-Eucl. dist. from 2: 157.987
-Eucl. dist. from 3: 156.956
-Eucl. dist. from 4: 815.912
-Eucl. dist. from 5: 116.463
-Eucl. dist. from 6: 90.5258
-Eucl. dist. from 7: 142.801
-Eucl. dist. from 8: 153.966
-Eucl. dist. from 9: 58.5668
-Eucl. dist. from $: 146.806
-  =  Min. eucl. dist.: 58.5668
+-------------------------------------
+1.85416
+0.955473
+0.622857
+1.36491
+1.3082
+2.65232
+3.53692
+4.47044
+5.4277
+6.69203
+7.1156
 
-Num of points: 127
-Eucl. dist. from 0: 28.9584
-Eucl. dist. from 1: 10.3619
-Eucl. dist. from 2: 110.835
-Eucl. dist. from 3: 110.548
-Eucl. dist. from 4: 864.608
-Eucl. dist. from 5: 80.1653
-Eucl. dist. from 6: 35.4247
-Eucl. dist. from 7: 95.1667
-Eucl. dist. from 8: 106.61
-Eucl. dist. from 9: 36.5078
-Eucl. dist. from $: 98.0733
-  =  Min. eucl. dist.: 10.3619
 
-Num of points: 152
-Eucl. dist. from 0: 82.4276
-Eucl. dist. from 1: 102.342
-Eucl. dist. from 2: 0.638847
-Eucl. dist. from 3: 2.02389
-Eucl. dist. from 4: 969.75
-Eucl. dist. from 5: 42.2618
-Eucl. dist. from 6: 79.0483
-Eucl. dist. from 7: 16.7283
-Eucl. dist. from 8: 4.90447
-Eucl. dist. from 9: 141.351
-Eucl. dist. from $: 13.3528
-  =  Min. eucl. dist.: 0.638847
+-------------------------------------
+        Central 0: 0.460803
+        Central 1: -0.264937
+        Central 2: 1.95337
+        Central 3: -1.28384
+Feature 0: 0.0307396
+Feature 1: 14.3242
+Feature 2: -18.2904
 
-Num of points: 0
+Classifying 3
+Num of points: 292
+-------------------------------------
+7.79825
+7.97985
+8.27908
+8.68381
+9.18007
+10.5652
+10.3925
+11.0847
+10.4108
+9.00195
+8.39944
 
-Recognized text for J2: Num of points: 136
-Eucl. dist. from 0: 75.2327
-Eucl. dist. from 1: 95.1649
-Eucl. dist. from 2: 6.65172
-Eucl. dist. from 3: 6.56708
-Eucl. dist. from 4: 962.868
-Eucl. dist. from 5: 36.455
-Eucl. dist. from 6: 71.9225
-Eucl. dist. from 7: 9.80195
-Eucl. dist. from 8: 2.60384
-Eucl. dist. from 9: 134.235
-Eucl. dist. from $: 6.18237
-  =  Min. eucl. dist.: 2.60384
 
-Num of points: 150
-Eucl. dist. from 0: 84.4994
-Eucl. dist. from 1: 104.39
-Eucl. dist. from 2: 2.71688
-Eucl. dist. from 3: 3.68145
-Eucl. dist. from 4: 971.843
-Eucl. dist. from 5: 44.2074
-Eucl. dist. from 6: 81.1551
-Eucl. dist. from 7: 18.8357
-Eucl. dist. from 8: 7.01211
-Eucl. dist. from 9: 143.459
-Eucl. dist. from $: 15.4487
-  =  Min. eucl. dist.: 2.71688
+-------------------------------------
+        Central 0: 0.420934
+        Central 1: -0.355086
+        Central 2: 1.96785
+        Central 3: -1.53332
+Feature 0: 0.0269478
+Feature 1: 9.30021
+Feature 2: -12.1609
 
-Num of points: 176
-Eucl. dist. from 0: 47.0639
-Eucl. dist. from 1: 59.2949
-Eucl. dist. from 2: 85.7575
-Eucl. dist. from 3: 84.6987
-Eucl. dist. from 4: 886.365
-Eucl. dist. from 5: 44.175
-Eucl. dist. from 6: 34.8463
-Eucl. dist. from 7: 70.8449
-Eucl. dist. from 8: 81.7884
-Eucl. dist. from 9: 70.5648
-Eucl. dist. from $: 74.8872
-  =  Min. eucl. dist.: 34.8463
+Classifying 4
+Num of points: 188
+-------------------------------------
+16.8776
+16.9844
+17.1489
+17.3696
+18.6004
+18.9101
+19.2667
+18.7662
+17.875
+16.5302
+15.6395
 
-Num of points: 130
-Eucl. dist. from 0: 6.44319
-Eucl. dist. from 1: 26.9564
-Eucl. dist. from 2: 75.8126
-Eucl. dist. from 3: 75.4805
-Eucl. dist. from 4: 896.666
-Eucl. dist. from 5: 46.613
-Eucl. dist. from 6: 9.72379
-Eucl. dist. from 7: 60.0467
-Eucl. dist. from 8: 71.5635
-Eucl. dist. from 9: 66.4177
-Eucl. dist. from $: 63.0311
-  =  Min. eucl. dist.: 6.44319
 
-Num of points: 139
-Eucl. dist. from 0: 83.3787
-Eucl. dist. from 1: 103.34
-Eucl. dist. from 2: 1.60117
-Eucl. dist. from 3: 2.02802
-Eucl. dist. from 4: 970.375
-Eucl. dist. from 5: 42.5564
-Eucl. dist. from 6: 79.8569
-Eucl. dist. from 7: 17.4843
-Eucl. dist. from 8: 5.73151
-Eucl. dist. from 9: 142.144
-Eucl. dist. from $: 14.2644
-  =  Min. eucl. dist.: 1.60117
+-------------------------------------
+        Central 0: 0.324155
+        Central 1: 0.359088
+        Central 2: 2.33226
+        Central 3: 1.32236
+Feature 0: 0.0283195
+Feature 1: 10.8386
+Feature 2: 10.2553
 
-Num of points: 0
+Classifying 5
+Num of points: 292
+-------------------------------------
+15.4779
+15.6134
+15.811
+16.0686
+16.3832
+16.7518
+17.1707
+16.7706
+17.3051
+17.8795
+19.2789
 
-Recognized text for J3: Num of points: 137
-Eucl. dist. from 0: 78.3939
-Eucl. dist. from 1: 98.3146
-Eucl. dist. from 2: 3.50261
-Eucl. dist. from 3: 3.66787
-Eucl. dist. from 4: 965.911
-Eucl. dist. from 5: 38.988
-Eucl. dist. from 6: 75.0617
-Eucl. dist. from 7: 12.827
-Eucl. dist. from 8: 1.32294
-Eucl. dist. from 9: 137.371
-Eucl. dist. from $: 9.33441
-  =  Min. eucl. dist.: 1.32294
 
-Num of points: 128
-Eucl. dist. from 0: 2.96288
-Eucl. dist. from 1: 18.8919
-Eucl. dist. from 2: 84.2446
-Eucl. dist. from 3: 83.9199
-Eucl. dist. from 4: 888.798
-Eucl. dist. from 5: 54.3583
-Eucl. dist. from 6: 11.8549
-Eucl. dist. from 7: 68.4919
-Eucl. dist. from 8: 79.9994
-Eucl. dist. from 9: 58.5498
-Eucl. dist. from $: 71.4656
-  =  Min. eucl. dist.: 2.96288
+-------------------------------------
+        Central 0: 0.405861
+        Central 1: -0.310897
+        Central 2: 2.09172
+        Central 3: -1.7658
+Feature 0: 0.0246571
+Feature 1: 12.0664
+Feature 2: -18.2688
 
-Num of points: 152
-Eucl. dist. from 0: 83.5504
-Eucl. dist. from 1: 103.444
-Eucl. dist. from 2: 1.80835
-Eucl. dist. from 3: 2.95937
-Eucl. dist. from 4: 970.93
-Eucl. dist. from 5: 43.3975
-Eucl. dist. from 6: 80.2123
-Eucl. dist. from 7: 17.9038
-Eucl. dist. from 8: 6.08066
-Eucl. dist. from 9: 142.517
-Eucl. dist. from $: 14.501
-  =  Min. eucl. dist.: 1.80835
+Classifying 6
+Num of points: 249
+-------------------------------------
+15.2721
+15.1747
+15.1429
+15.177
+15.2767
+15.4406
+15.6667
+15.0065
+15.3698
+15.7881
+17.1343
 
+
+-------------------------------------
+        Central 0: 0.375797
+        Central 1: -0.143696
+        Central 2: 2.19906
+        Central 3: -1.07766
+Feature 0: 0.0162631
+Feature 1: 40.3709
+Feature 2: -52.1906
+
+Classifying 7
+Num of points: 223
+-------------------------------------
+5.47204
+5.08517
+4.87593
+4.86728
+5.06025
+4.56404
+3.7602
+3.07371
+2.59929
+2.4627
+2.71542
+
+
+-------------------------------------
+        Central 0: 0.449708
+        Central 1: 0.1644
+        Central 2: 2.32854
+        Central 3: 0.93454
+Feature 0: 0.0197215
+Feature 1: 34.9324
+Feature 2: 34.5773
+
+Classifying 8
 Num of points: 140
-Eucl. dist. from 0: 82.547
-Eucl. dist. from 1: 102.538
-Eucl. dist. from 2: 1.30725
-Eucl. dist. from 3: 1.03401
-Eucl. dist. from 4: 969.406
-Eucl. dist. from 5: 41.5506
-Eucl. dist. from 6: 78.9516
-Eucl. dist. from 7: 16.572
-Eucl. dist. from 8: 4.9035
-Eucl. dist. from 9: 141.231
-Eucl. dist. from $: 13.434
-  =  Min. eucl. dist.: 1.03401
+-------------------------------------
+6.19367
+6.02784
+6.02562
+6.18719
+6.50035
+7.82558
+8.73222
+9.6573
+10.0616
+10.5456
+11.0988
 
-Num of points: 138
-Eucl. dist. from 0: 174.261
-Eucl. dist. from 1: 158.295
-Eucl. dist. from 2: 252.281
-Eucl. dist. from 3: 251.61
-Eucl. dist. from 4: 717.453
-Eucl. dist. from 5: 213.569
-Eucl. dist. from 6: 174.456
-Eucl. dist. from 7: 236.171
-Eucl. dist. from 8: 247.99
-Eucl. dist. from 9: 112.871
-Eucl. dist. from $: 239.765
-  =  Min. eucl. dist.: 112.871
 
+-------------------------------------
+        Central 0: 0.393018
+        Central 1: -0.171844
+        Central 2: 1.64668
+        Central 3: -0.716587
+Feature 0: 0.0233691
+Feature 1: 23.1158
+Feature 2: -24.2661
+
+Classifying 9
+Num of points: 244
+-------------------------------------
+15.6245
+15.9775
+16.384
+16.8402
+18.2016
+18.7204
+18.4677
+19.0843
+19.7324
+20.4089
+21.8227
+
+
+-------------------------------------
+        Central 0: 0.379336
+        Central 1: -0.111378
+        Central 2: 2.16872
+        Central 3: -0.883571
+Feature 0: 0.0143456
+Feature 1: 58.3447
+Feature 2: -71.2262
+
+Classifying $
+Num of points: 106
+-------------------------------------
+13.1802
+12.3115
+11.4643
+10.083
+9.59422
+9.18864
+8.87768
+8.67153
+8.57773
+8.59998
+8.73737
+
+
+-------------------------------------
+        Central 0: 0.448999
+        Central 1: -0.141591
+        Central 2: 2.09016
+        Central 3: -0.438041
+Feature 0: 0.0425916
+Feature 1: 39.2304
+Feature 2: -21.8495
+
+Num of points: 106
+-------------------------------------
+11.4556
+10.0741
+9.58438
+9.17789
+8.86607
+8.65913
+8.56469
+8.58646
+8.72358
+8.02224
+7.0879
+
+
+-------------------------------------
+        Central 0: 0.448976
+        Central 1: -0.141728
+        Central 2: 2.09003
+        Central 3: -0.438601
+Feature 0: 0.0426119
+Feature 1: 39.1713
+Feature 2: -21.8352
+Eucl. dist. from 0: 16.7784
+Eucl. dist. from 1: 26.2282
+Eucl. dist. from 2: 25.0987
+Eucl. dist. from 3: 31.3986
+Eucl. dist. from 4: 42.8082
+Eucl. dist. from 5: 27.3385
+Eucl. dist. from 6: 30.3791
+Eucl. dist. from 7: 56.5716
+Eucl. dist. from 8: 16.2385
+Eucl. dist. from 9: 52.982
+Eucl. dist. from $: 0.0608466
+Num of points: 142
+-------------------------------------
+2.5942
+3.52766
+4.48986
+5.46565
+6.44886
+7.43655
+8.42714
+9.41973
+10.4137
+11.4088
+12.4046
+
+
+-------------------------------------
+        Central 0: 0.498354
+        Central 1: -0.259683
+        Central 2: 1.82002
+        Central 3: -1.04232
+Feature 0: 0.0320099
+Feature 1: 13.7534
+Feature 2: -15.4567
+Eucl. dist. from 0: 41.1886
+Eucl. dist. from 1: 0.0222982
+Eucl. dist. from 2: 2.89069
+Eucl. dist. from 3: 5.54013
+Eucl. dist. from 4: 25.8767
+Eucl. dist. from 5: 3.27934
+Eucl. dist. from 6: 45.3637
+Eucl. dist. from 7: 54.3319
+Eucl. dist. from 8: 12.8553
+Eucl. dist. from 9: 71.4047
+Eucl. dist. from $: 26.2668
+Num of points: 133
+-------------------------------------
+8.50403
+8.61874
+8.84572
+9.17665
+9.60078
+10.1064
+10.6819
+11.3167
+12.0013
+12.7277
+13.4892
+
+
+-------------------------------------
+        Central 0: 0.357027
+        Central 1: -0.0973864
+        Central 2: 1.52925
+        Central 3: -0.325554
+Feature 0: 0.0170884
+Feature 1: 50.3187
+Feature 2: -34.3263
+Eucl. dist. from 0: 0.0420268
+Eucl. dist. from 1: 41.169
+Eucl. dist. from 2: 39.405
+Eucl. dist. from 3: 46.6242
+Eucl. dist. from 4: 59.5499
+Eucl. dist. from 5: 41.4859
+Eucl. dist. from 6: 20.4473
+Eucl. dist. from 7: 70.6006
+Eucl. dist. from 8: 29.0036
+Eucl. dist. from 9: 37.7627
+Eucl. dist. from $: 16.6919
+Num of points: 134
+-------------------------------------
+9.22179
+9.3433
+9.56835
+9.88986
+10.2988
+10.7852
+10.544
+11.1997
+11.9033
+13.3171
+14.0571
+
+
+-------------------------------------
+        Central 0: 0.35426
+        Central 1: -0.102887
+        Central 2: 1.52885
+        Central 3: -0.366519
+Feature 0: 0.0174119
+Feature 1: 46.3257
+Feature 2: -34.6236
+Eucl. dist. from 0: 4.04285
+Eucl. dist. from 1: 37.8148
+Eucl. dist. from 2: 35.9287
+Eucl. dist. from 3: 43.3066
+Eucl. dist. from 4: 57.2141
+Eucl. dist. from 5: 37.9629
+Eucl. dist. from 6: 18.5488
+Eucl. dist. from 7: 70.1326
+Eucl. dist. from 8: 25.4161
+Eucl. dist. from 9: 38.5254
+Eucl. dist. from $: 14.6124
+Num of points: 176
+-------------------------------------
+0.626808
+1.37422
+1.31795
+2.66104
+3.54637
+4.48022
+5.43764
+6.70165
+7.12464
+8.49145
+9.3595
+
+
+-------------------------------------
+        Central 0: 0.460801
+        Central 1: -0.265465
+        Central 2: 1.95309
+        Central 3: -1.28554
+Feature 0: 0.0307703
+Feature 1: 14.2795
+Feature 2: -18.242
+Eucl. dist. from 0: 39.5074
+Eucl. dist. from 1: 2.84485
+Eucl. dist. from 2: 0.0659248
+Eucl. dist. from 3: 7.85955
+Eucl. dist. from 4: 28.7043
+Eucl. dist. from 5: 2.21322
+Eucl. dist. from 6: 42.8167
+Eucl. dist. from 7: 56.7136
+Eucl. dist. from 8: 10.6944
+Eucl. dist. from 9: 68.9135
+Eucl. dist. from $: 25.2104
+Num of points: 142
+-------------------------------------
+2.55583
+3.49299
+4.45754
+5.43492
+6.41927
+7.40782
+8.39908
+9.39219
+10.3866
+11.382
+12.502
+
+
+-------------------------------------
+        Central 0: 0.498097
+        Central 1: -0.272927
+        Central 2: 1.80974
+        Central 3: -1.09
+Feature 0: 0.0326798
+Feature 1: 12.6925
+Feature 2: -14.633
+Eucl. dist. from 0: 42.5098
+Eucl. dist. from 1: 1.32236
+Eucl. dist. from 2: 4.00488
+Eucl. dist. from 3: 4.19749
+Eucl. dist. from 4: 24.9573
+Eucl. dist. from 5: 3.68927
+Eucl. dist. from 6: 46.6547
+Eucl. dist. from 7: 54.0025
+Eucl. dist. from 8: 14.193
+Eucl. dist. from 9: 72.7112
+Eucl. dist. from $: 27.5016
+Num of points: 140
+-------------------------------------
+6.0265
+6.1902
+6.50525
+7.83132
+8.73733
+9.66191
+10.0674
+10.5523
+11.1064
+11.7197
+12.3835
+
+
+-------------------------------------
+        Central 0: 0.393018
+        Central 1: -0.17185
+        Central 2: 1.64668
+        Central 3: -0.716612
+Feature 0: 0.0233695
+Feature 1: 23.1145
+Feature 2: -24.2652
+Eucl. dist. from 0: 29.0471
+Eucl. dist. from 1: 12.8737
+Eucl. dist. from 2: 10.6286
+Eucl. dist. from 3: 18.367
+Eucl. dist. from 4: 36.6383
+Eucl. dist. from 5: 12.5705
+Eucl. dist. from 6: 32.827
+Eucl. dist. from 7: 60.0176
+Eucl. dist. from 8: 0.00152734
+Eucl. dist. from 9: 58.7069
+Eucl. dist. from $: 16.296
 Num of points: 0
 
-Recognized text for J4: 
+Recognized text for J2: $1,002.18
+
+
+Classifying 0
+Num of points: 190
+-------------------------------------
+15.1671
+14.3353
+14.5631
+14.8549
+16.1361
+16.5213
+16.9569
+16.5831
+17.1342
+17.7247
+19.1277
+
+
+-------------------------------------
+        Central 0: 0.2633
+        Central 1: -0.29696
+        Central 2: 1.58837
+        Central 3: -0.983869
+Feature 0: 0.0208462
+Feature 1: 9.8153
+Feature 2: -11.1568
+
+Classifying 1
+Num of points: 199
+-------------------------------------
+4.51907
+5.33841
+6.2109
+7.11702
+8.04541
+8.98917
+9.94394
+10.9068
+11.6796
+12.6685
+13.6589
+
+
+-------------------------------------
+        Central 0: 0.461062
+        Central 1: -0.340022
+        Central 2: 1.8545
+        Central 3: -1.31712
+Feature 0: 0.0271061
+Feature 1: 9.35331
+Feature 2: -11.3923
+
+Classifying 2
+Num of points: 276
+-------------------------------------
+2.62949
+1.79987
+1.25093
+1.37482
+2.05315
+3.45686
+4.16642
+4.97677
+5.84614
+6.75178
+7.68087
+
+
+-------------------------------------
+        Central 0: 0.432427
+        Central 1: -0.415319
+        Central 2: 2.06221
+        Central 3: -1.97141
+Feature 0: 0.0285739
+Feature 1: 7.70479
+Feature 2: -11.4291
+
+Classifying 3
+Num of points: 290
+-------------------------------------
+7.67888
+7.8197
+8.0827
+8.4565
+8.9272
+10.3048
+10.1025
+10.7816
+10.096
+8.68535
+8.06989
+
+
+-------------------------------------
+        Central 0: 0.422657
+        Central 1: -0.335112
+        Central 2: 1.95289
+        Central 3: -1.42549
+Feature 0: 0.026221
+Feature 1: 10.0668
+Feature 2: -12.6936
+
+Classifying 4
+Num of points: 189
+-------------------------------------
+17.8361
+17.8831
+16.9948
+17.1611
+17.3835
+18.6154
+18.9265
+19.2846
+18.7859
+17.8954
+16.5498
+
+
+-------------------------------------
+        Central 0: 0.323516
+        Central 1: 0.362461
+        Central 2: 2.34371
+        Central 3: 1.34018
+Feature 0: 0.0284632
+Feature 1: 10.7402
+Feature 2: 10.2009
+
+Classifying 5
+Num of points: 293
+-------------------------------------
+15.3169
+15.3934
+14.5501
+14.7668
+15.047
+16.3208
+16.6949
+17.1194
+16.7278
+17.2677
+17.8473
+
+
+-------------------------------------
+        Central 0: 0.405403
+        Central 1: -0.308764
+        Central 2: 2.09226
+        Central 3: -1.77358
+Feature 0: 0.0245263
+Feature 1: 12.1949
+Feature 2: -18.6036
+
+Classifying 6
+Num of points: 248
+-------------------------------------
+15.3928
+15.2323
+15.1364
+15.1061
+15.142
+15.2436
+15.4095
+15.6377
+14.9803
+15.3459
+15.7665
+
+
+-------------------------------------
+        Central 0: 0.375872
+        Central 1: -0.148795
+        Central 2: 2.19049
+        Central 3: -1.09273
+Feature 0: 0.0165391
+Feature 1: 38.1643
+Feature 2: -49.3554
+
+Classifying 7
+Num of points: 225
+-------------------------------------
+8.18445
+7.24546
+6.32519
+5.43318
+5.02232
+4.78832
+4.75735
+4.93322
+4.4218
+3.61438
+2.92834
+
+
+-------------------------------------
+        Central 0: 0.44831
+        Central 1: 0.178111
+        Central 2: 2.31862
+        Central 3: 0.999998
+Feature 0: 0.0205765
+Feature 1: 30.8457
+Feature 2: 31.5223
+
+Classifying 8
+Num of points: 202
+-------------------------------------
+10.6856
+10.8716
+11.1446
+12.4245
+13.3614
+14.3068
+15.2592
+16.2173
+16.5231
+16.8826
+17.2925
+
+
+-------------------------------------
+        Central 0: 0.318624
+        Central 1: -0.360649
+        Central 2: 1.73147
+        Central 3: -1.4585
+Feature 0: 0.0240634
+Feature 1: 7.99445
+Feature 2: -11.2134
+
+Classifying 9
+Num of points: 244
+-------------------------------------
+15.6284
+15.9816
+16.3883
+16.8447
+18.2062
+18.7252
+18.4727
+19.0895
+19.7376
+20.4142
+21.828
+
+
+-------------------------------------
+        Central 0: 0.379377
+        Central 1: -0.110855
+        Central 2: 2.17018
+        Central 3: -0.882534
+Feature 0: 0.0143123
+Feature 1: 58.798
+Feature 2: -71.8159
+
+Classifying $
+Num of points: 174
+-------------------------------------
+15.4903
+14.0774
+14.212
+13.6381
+13.1154
+12.6502
+11.3249
+11.9189
+11.6652
+11.4931
+11.4065
+
+
+-------------------------------------
+        Central 0: 0.415789
+        Central 1: -0.279012
+        Central 2: 2.32488
+        Central 3: -1.17496
+Feature 0: 0.0451171
+Feature 1: 15.7749
+Feature 2: -15.0931
+
+Num of points: 171
+-------------------------------------
+9.92228
+8.99682
+8.08912
+7.20589
+6.35736
+5.55941
+4.83717
+3.4252
+2.75221
+2.32753
+2.29349
+
+
+-------------------------------------
+        Central 0: 0.401685
+        Central 1: -0.318151
+        Central 2: 2.39537
+        Central 3: -1.4361
+Feature 0: 0.047387
+Feature 1: 13.3482
+Feature 2: -14.1879
+Eucl. dist. from 0: 4.65505
+Eucl. dist. from 1: 4.87592
+Eucl. dist. from 2: 6.28165
+Eucl. dist. from 3: 3.60567
+Eucl. dist. from 4: 24.5279
+Eucl. dist. from 5: 4.56397
+Eucl. dist. from 6: 43.0418
+Eucl. dist. from 7: 48.9447
+Eucl. dist. from 8: 6.12461
+Eucl. dist. from 9: 73.394
+Eucl. dist. from $: 2.59001
+Num of points: 188
+-------------------------------------
+17.1139
+17.3355
+18.5669
+18.8776
+19.2353
+18.7363
+17.8458
+16.5003
+15.6103
+14.7344
+14.4276
+
+
+-------------------------------------
+        Central 0: 0.324106
+        Central 1: 0.364272
+        Central 2: 2.32845
+        Central 3: 1.34792
+Feature 0: 0.0285232
+Feature 1: 10.5908
+Feature 2: 10.1581
+Eucl. dist. from 0: 21.329
+Eucl. dist. from 1: 21.5859
+Eucl. dist. from 2: 21.7793
+Eucl. dist. from 3: 22.8577
+Eucl. dist. from 4: 0.155418
+Eucl. dist. from 5: 28.8064
+Eucl. dist. from 6: 65.5909
+Eucl. dist. from 7: 29.4396
+Eucl. dist. from 8: 21.5286
+Eucl. dist. from 9: 95.0982
+Eucl. dist. from $: 25.7779
+Num of points: 249
+-------------------------------------
+15.1428
+15.1774
+15.2775
+15.4419
+15.6685
+15.0088
+15.3725
+15.7912
+17.1376
+17.628
+18.1603
+
+
+-------------------------------------
+        Central 0: 0.375675
+        Central 1: -0.144226
+        Central 2: 2.19851
+        Central 3: -1.07986
+Feature 0: 0.0162924
+Feature 1: 40.1386
+Feature 2: -51.9133
+Eucl. dist. from 0: 50.7996
+Eucl. dist. from 1: 50.8889
+Eucl. dist. from 2: 51.8741
+Eucl. dist. from 3: 49.4217
+Eucl. dist. from 4: 68.7201
+Eucl. dist. from 5: 43.4786
+Eucl. dist. from 6: 3.23118
+Eucl. dist. from 7: 83.9516
+Eucl. dist. from 8: 51.8626
+Eucl. dist. from 9: 27.2816
+Eucl. dist. from $: 44.1511
+Num of points: 293
+-------------------------------------
+8.04155
+8.4515
+9.80841
+10.3424
+10.1839
+10.8845
+10.2204
+8.81362
+8.22582
+7.72323
+8.27005
+
+
+-------------------------------------
+        Central 0: 0.421365
+        Central 1: -0.35335
+        Central 2: 1.9729
+        Central 3: -1.52542
+Feature 0: 0.0269756
+Feature 1: 9.39285
+Feature 2: -12.2174
+Eucl. dist. from 0: 1.14164
+Eucl. dist. from 1: 0.825995
+Eucl. dist. from 2: 1.86304
+Eucl. dist. from 3: 0.825211
+Eucl. dist. from 4: 22.4588
+Eucl. dist. from 5: 6.97392
+Eucl. dist. from 6: 46.9791
+Eucl. dist. from 7: 48.7174
+Eucl. dist. from 8: 1.72151
+Eucl. dist. from 9: 77.4135
+Eucl. dist. from $: 7.00002
+Num of points: 292
+-------------------------------------
+15.8123
+16.0702
+16.3852
+16.7541
+17.1733
+16.7738
+17.3085
+17.8831
+19.2826
+19.9008
+20.5491
+
+
+-------------------------------------
+        Central 0: 0.405868
+        Central 1: -0.310753
+        Central 2: 2.09214
+        Central 3: -1.76599
+Feature 0: 0.0246514
+Feature 1: 12.0773
+Feature 2: -18.2877
+Eucl. dist. from 0: 7.48106
+Eucl. dist. from 1: 7.41391
+Eucl. dist. from 2: 8.1338
+Eucl. dist. from 3: 5.94445
+Eucl. dist. from 4: 28.52
+Eucl. dist. from 5: 0.337107
+Eucl. dist. from 6: 40.5677
+Eucl. dist. from 7: 53.2287
+Eucl. dist. from 8: 8.16797
+Eucl. dist. from 9: 71.05
+Eucl. dist. from $: 4.88655
+Num of points: 0
+
+Recognized text for J3: $46.35
+
+
+Classifying 0
+Num of points: 190
+-------------------------------------
+15.1671
+14.3353
+14.5631
+14.8549
+16.1361
+16.5213
+16.9569
+16.5831
+17.1342
+17.7247
+19.1277
+
+
+-------------------------------------
+        Central 0: 0.2633
+        Central 1: -0.29696
+        Central 2: 1.58837
+        Central 3: -0.983869
+Feature 0: 0.0208462
+Feature 1: 9.8153
+Feature 2: -11.1568
+
+Classifying 1
+Num of points: 199
+-------------------------------------
+4.51907
+5.33841
+6.2109
+7.11702
+8.04541
+8.98917
+9.94394
+10.9068
+11.6796
+12.6685
+13.6589
+
+
+-------------------------------------
+        Central 0: 0.461062
+        Central 1: -0.340022
+        Central 2: 1.8545
+        Central 3: -1.31712
+Feature 0: 0.0271061
+Feature 1: 9.35331
+Feature 2: -11.3923
+
+Classifying 2
+Num of points: 276
+-------------------------------------
+2.62949
+1.79987
+1.25093
+1.37482
+2.05315
+3.45686
+4.16642
+4.97677
+5.84614
+6.75178
+7.68087
+
+
+-------------------------------------
+        Central 0: 0.432427
+        Central 1: -0.415319
+        Central 2: 2.06221
+        Central 3: -1.97141
+Feature 0: 0.0285739
+Feature 1: 7.70479
+Feature 2: -11.4291
+
+Classifying 3
+Num of points: 290
+-------------------------------------
+7.67888
+7.8197
+8.0827
+8.4565
+8.9272
+10.3048
+10.1025
+10.7816
+10.096
+8.68535
+8.06989
+
+
+-------------------------------------
+        Central 0: 0.422657
+        Central 1: -0.335112
+        Central 2: 1.95289
+        Central 3: -1.42549
+Feature 0: 0.026221
+Feature 1: 10.0668
+Feature 2: -12.6936
+
+Classifying 4
+Num of points: 189
+-------------------------------------
+17.8361
+17.8831
+16.9948
+17.1611
+17.3835
+18.6154
+18.9265
+19.2846
+18.7859
+17.8954
+16.5498
+
+
+-------------------------------------
+        Central 0: 0.323516
+        Central 1: 0.362461
+        Central 2: 2.34371
+        Central 3: 1.34018
+Feature 0: 0.0284632
+Feature 1: 10.7402
+Feature 2: 10.2009
+
+Classifying 5
+Num of points: 293
+-------------------------------------
+15.3169
+15.3934
+14.5501
+14.7668
+15.047
+16.3208
+16.6949
+17.1194
+16.7278
+17.2677
+17.8473
+
+
+-------------------------------------
+        Central 0: 0.405403
+        Central 1: -0.308764
+        Central 2: 2.09226
+        Central 3: -1.77358
+Feature 0: 0.0245263
+Feature 1: 12.1949
+Feature 2: -18.6036
+
+Classifying 6
+Num of points: 248
+-------------------------------------
+15.3928
+15.2323
+15.1364
+15.1061
+15.142
+15.2436
+15.4095
+15.6377
+14.9803
+15.3459
+15.7665
+
+
+-------------------------------------
+        Central 0: 0.375872
+        Central 1: -0.148795
+        Central 2: 2.19049
+        Central 3: -1.09273
+Feature 0: 0.0165391
+Feature 1: 38.1643
+Feature 2: -49.3554
+
+Classifying 7
+Num of points: 225
+-------------------------------------
+8.18445
+7.24546
+6.32519
+5.43318
+5.02232
+4.78832
+4.75735
+4.93322
+4.4218
+3.61438
+2.92834
+
+
+-------------------------------------
+        Central 0: 0.44831
+        Central 1: 0.178111
+        Central 2: 2.31862
+        Central 3: 0.999998
+Feature 0: 0.0205765
+Feature 1: 30.8457
+Feature 2: 31.5223
+
+Classifying 8
+Num of points: 202
+-------------------------------------
+10.6856
+10.8716
+11.1446
+12.4245
+13.3614
+14.3068
+15.2592
+16.2173
+16.5231
+16.8826
+17.2925
+
+
+-------------------------------------
+        Central 0: 0.318624
+        Central 1: -0.360649
+        Central 2: 1.73147
+        Central 3: -1.4585
+Feature 0: 0.0240634
+Feature 1: 7.99445
+Feature 2: -11.2134
+
+Classifying 9
+Num of points: 244
+-------------------------------------
+15.6284
+15.9816
+16.3883
+16.8447
+18.2062
+18.7252
+18.4727
+19.0895
+19.7376
+20.4142
+21.828
+
+
+-------------------------------------
+        Central 0: 0.379377
+        Central 1: -0.110855
+        Central 2: 2.17018
+        Central 3: -0.882534
+Feature 0: 0.0143123
+Feature 1: 58.798
+Feature 2: -71.8159
+
+Classifying $
+Num of points: 174
+-------------------------------------
+15.4903
+14.0774
+14.212
+13.6381
+13.1154
+12.6502
+11.3249
+11.9189
+11.6652
+11.4931
+11.4065
+
+
+-------------------------------------
+        Central 0: 0.415789
+        Central 1: -0.279012
+        Central 2: 2.32488
+        Central 3: -1.17496
+Feature 0: 0.0451171
+Feature 1: 15.7749
+Feature 2: -15.0931
+
+Num of points: 173
+-------------------------------------
+10.5948
+9.64214
+8.70005
+7.77245
+6.86521
+5.98759
+5.80634
+5.14137
+4.59933
+3.27591
+2.36415
+
+
+-------------------------------------
+        Central 0: 0.412852
+        Central 1: -0.274329
+        Central 2: 2.29117
+        Central 3: -1.17181
+Feature 0: 0.0441347
+Feature 1: 15.9459
+Feature 2: -15.5709
+Eucl. dist. from 0: 7.5544
+Eucl. dist. from 1: 7.80531
+Eucl. dist. from 2: 9.22336
+Eucl. dist. from 3: 6.54545
+Eucl. dist. from 4: 26.2923
+Eucl. dist. from 5: 4.82375
+Eucl. dist. from 6: 40.4358
+Eucl. dist. from 7: 49.3941
+Eucl. dist. from 8: 9.06719
+Eucl. dist. from 9: 70.7093
+Eucl. dist. from $: 0.507467
+Num of points: 210
+-------------------------------------
+10.3554
+10.6418
+11.9314
+12.8628
+13.8039
+14.7527
+15.7078
+16.966
+17.3164
+17.7164
+17.2856
+
+
+-------------------------------------
+        Central 0: 0.318454
+        Central 1: -0.406776
+        Central 2: 1.81094
+        Central 3: -1.67209
+Feature 0: 0.0256128
+Feature 1: 6.98026
+Feature 2: -10.1053
+Eucl. dist. from 0: 3.02377
+Eucl. dist. from 1: 2.69961
+Eucl. dist. from 2: 1.50915
+Eucl. dist. from 3: 4.02815
+Eucl. dist. from 4: 20.6514
+Eucl. dist. from 5: 9.97067
+Eucl. dist. from 6: 50.1301
+Eucl. dist. from 7: 47.9835
+Eucl. dist. from 8: 1.50214
+Eucl. dist. from 9: 80.5809
+Eucl. dist. from $: 10.1106
+Num of points: 295
+-------------------------------------
+7.57979
+7.89762
+8.32417
+8.8437
+10.2359
+10.102
+10.1649
+8.76136
+8.19251
+7.71188
+8.29145
+
+
+-------------------------------------
+        Central 0: 0.416486
+        Central 1: -0.386022
+        Central 2: 2.01944
+        Central 3: -1.7216
+Feature 0: 0.0280368
+Feature 1: 8.42
+Feature 2: -11.5533
+Eucl. dist. from 0: 1.45057
+Eucl. dist. from 1: 0.947093
+Eucl. dist. from 2: 0.725925
+Eucl. dist. from 3: 2.00302
+Eucl. dist. from 4: 21.8777
+Eucl. dist. from 5: 7.99727
+Eucl. dist. from 6: 48.1012
+Eucl. dist. from 7: 48.5636
+Eucl. dist. from 8: 0.544697
+Eucl. dist. from 9: 78.5463
+Eucl. dist. from $: 8.16237
+Num of points: 241
+-------------------------------------
+15.986
+16.3916
+16.8469
+18.208
+18.726
+18.4721
+19.088
+19.7354
+20.4112
+21.1128
+22.527
+
+
+-------------------------------------
+        Central 0: 0.381912
+        Central 1: -0.102353
+        Central 2: 2.16101
+        Central 3: -0.832084
+Feature 0: 0.0137964
+Feature 1: 65.9939
+Feature 2: -79.4261
+Eucl. dist. from 0: 88.4123
+Eucl. dist. from 1: 88.5254
+Eucl. dist. from 2: 89.5612
+Eucl. dist. from 3: 87.0693
+Eucl. dist. from 4: 105.29
+Eucl. dist. from 5: 81.2016
+Eucl. dist. from 6: 40.9723
+Eucl. dist. from 7: 116.383
+Eucl. dist. from 8: 89.5372
+Eucl. dist. from 9: 10.4736
+Eucl. dist. from $: 81.613
+Num of points: 276
+-------------------------------------
+3.64609
+4.29327
+5.05671
+5.89139
+6.77102
+7.68016
+8.60948
+9.00707
+9.49377
+10.0566
+11.4577
+
+
+-------------------------------------
+        Central 0: 0.433047
+        Central 1: -0.388232
+        Central 2: 2.06103
+        Central 3: -1.89503
+Feature 0: 0.0276877
+Feature 1: 8.52014
+Feature 2: -12.5729
+Eucl. dist. from 0: 1.91905
+Eucl. dist. from 1: 1.44494
+Eucl. dist. from 2: 1.40462
+Eucl. dist. from 3: 1.55139
+Eucl. dist. from 4: 22.8818
+Eucl. dist. from 5: 7.06213
+Eucl. dist. from 6: 47.2413
+Eucl. dist. from 7: 49.4249
+Eucl. dist. from 8: 1.45761
+Eucl. dist. from 9: 77.702
+Eucl. dist. from $: 7.68004
+Num of points: 0
+
+Recognized text for J4: $88.92
