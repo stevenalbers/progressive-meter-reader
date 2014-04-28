@@ -1,0 +1,6 @@
+Region Name|Meter Value
+Green Gem|$9231567
+Red Gem|7$2564
+Orange Gem|$8522
+Blue Gem|$2222
+Purple Gem|32234

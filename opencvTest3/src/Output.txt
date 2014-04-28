@@ -1,6 +1,6 @@
 Region Name|Meter Value
-Jackpot Value 0|$4,113.96
-Jackpot Value 1|$219.08
-Jackpot Value 2|$1,002.18
-Jackpot Value 3|$46.35
-Jackpot Value 4|$88.92
+Green Gem|$1234597
+Red Gem|$125$4
+Orange Gem|$7512
+Blue Gem|$5512
+Purple Gem|$1230

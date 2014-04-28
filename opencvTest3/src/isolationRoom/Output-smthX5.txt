@@ -1,0 +1,6 @@
+Region Name|Meter Value
+Green Gem|$9231567	- 2 wrong
+Red Gem|$$2561		- 3 wrong
+Orange Gem|$8522	- 2 wrong
+Blue Gem|$2222		- 2 wrong
+Purple Gem|32234	- 2 wrong

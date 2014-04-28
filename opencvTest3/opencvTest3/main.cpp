@@ -116,7 +116,7 @@ int main()
 	ofstream toUsrOutFile;
 	toUsrOutFile.open("../src/Output.txt");
 	str = "";
-	toUsrOutFile << "Region Name" << setw(outDisplt) << "Meter Value\n\n";
+	toUsrOutFile << "Region Name|Meter Value\n";
 	
 	// =====================================  CHOOSING THE GAME:  =========================================
 	mainMenu();
@@ -1098,28 +1098,11 @@ void prepareDtxnVars( int jValID )
 void formatCurrJVal(ofstream & toDbgFile, ofstream & toUsrOutFile, int jVal)
 {
 	//cout << "Formatting the current jackpot value" << endl;
-	toUsrOutFile << jValRgns[jVal].text << setw( outDisplt - jValRgns[jVal].text.length() - 1 );
+	toUsrOutFile << jValRgns[jVal].text << "|";
 	
-	for(int s=0 ; s < str.length() ; s++) // format the jackpot value here.
-	{
-		toDbgFile << str.at(s); // copy the char to the right-to-left string
-		toUsrOutFile << str.at(s); // copy the char to the right-to-left string
-		cout << str.at(s);
-
-		if(s == str.length()-3) // 3rd char from right - decimal point
-		{
-			toDbgFile << ".";
-			toUsrOutFile << ".";
-			cout << ".";
-		}
-
-		else if( (str.length()-s)%3==0 && str.at(s)!='$' ) // 3rd char from right - decimal point
-		{
-			toDbgFile << ",";
-			toUsrOutFile << ",";
-			cout << ",";
-		}
-	}
+	toDbgFile << str; // copy the char to the right-to-left string
+	toUsrOutFile << str; // copy the char to the right-to-left string
+	cout << str;
 
 	cout << endl << endl;
 }
