@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CabinetInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GameName>Instant Riches</GameName>
+  <GameID>4784</GameID>
+  <IPAddress>192.168.100.112</IPAddress>
+  <SpecifiedRegions>
+    <RegionInfo>
+      <RegionName>Jackpot 1</RegionName>
+      <TopLeftX>10</TopLeftX>
+      <TopLeftY>20</TopLeftY>
+      <BottomRightX>45</BottomRightX>
+      <BottomRightY>11</BottomRightY>
+    </RegionInfo>
+    <RegionInfo>
+      <RegionName>Jackpot 2</RegionName>
+      <TopLeftX>11</TopLeftX>
+      <TopLeftY>21</TopLeftY>
+      <BottomRightX>3</BottomRightX>
+      <BottomRightY>4</BottomRightY>
+    </RegionInfo>
+    <RegionInfo>
+      <RegionName>Jackpot 3</RegionName>
+      <TopLeftX>77</TopLeftX>
+      <TopLeftY>45</TopLeftY>
+      <BottomRightX>23</BottomRightX>
+      <BottomRightY>33</BottomRightY>
+    </RegionInfo>
+    <RegionInfo>
+      <RegionName>Jackpot 4</RegionName>
+      <TopLeftX>22</TopLeftX>
+      <TopLeftY>63</TopLeftY>
+      <BottomRightX>324</BottomRightX>
+      <BottomRightY>34</BottomRightY>
+    </RegionInfo>
+    <RegionInfo>
+      <RegionName>Jackpot 5</RegionName>
+      <TopLeftX>63</TopLeftX>
+      <TopLeftY>332</TopLeftY>
+      <BottomRightX>23</BottomRightX>
+      <BottomRightY>45</BottomRightY>
+    </RegionInfo>
+  </SpecifiedRegions>
+</CabinetInfo>
