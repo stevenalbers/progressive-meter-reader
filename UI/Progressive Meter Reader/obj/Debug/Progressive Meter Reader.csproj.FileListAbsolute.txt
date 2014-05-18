@@ -10,3 +10,6 @@ C:\Users\Steven\Documents\Visual Studio 2012\Projects\PMR\Progressive Meter Read
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.main.resources
 C:\Users\Steven\documents\visual studio 2012\Projects\PMR\Progressive Meter Reader\bin\Debug\CashBurst.xml
 C:\Users\Steven\documents\visual studio 2012\Projects\PMR\Progressive Meter Reader\bin\Debug\InstantRiches.xml
+E:\Git\progressive-meter-reader\UI\Progressive Meter Reader\bin\Debug\Progressive Meter Reader.exe.config
+E:\Git\progressive-meter-reader\UI\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.exe
+E:\Git\progressive-meter-reader\UI\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.pdb

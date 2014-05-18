@@ -1,0 +1,24 @@
+c:\users\steven\documents\visual studio 2012\Projects\PMR\Progressive Meter Reader\bin\Debug\Progressive Meter Reader.exe.config
+C:\Users\Steven\Documents\Visual Studio 2012\Projects\PMR\Progressive Meter Reader\bin\Debug\Progressive Meter Reader.exe
+C:\Users\Steven\Documents\Visual Studio 2012\Projects\PMR\Progressive Meter Reader\bin\Debug\Progressive Meter Reader.pdb
+C:\Users\Steven\Documents\Visual Studio 2012\Projects\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.csprojResolveAssemblyReference.cache
+C:\Users\Steven\Documents\Visual Studio 2012\Projects\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.details.resources
+C:\Users\Steven\Documents\Visual Studio 2012\Projects\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.Properties.Resources.resources
+C:\Users\Steven\Documents\Visual Studio 2012\Projects\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.csproj.GenerateResource.Cache
+C:\Users\Steven\Documents\Visual Studio 2012\Projects\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.exe
+C:\Users\Steven\Documents\Visual Studio 2012\Projects\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.pdb
+C:\Users\Steven\Documents\Visual Studio 2012\Projects\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.main.resources
+C:\Users\Steven\documents\visual studio 2012\Projects\PMR\Progressive Meter Reader\bin\Debug\CashBurst.xml
+C:\Users\Steven\documents\visual studio 2012\Projects\PMR\Progressive Meter Reader\bin\Debug\InstantRiches.xml
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\bin\Debug\Progressive Meter Reader.exe.config
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.exe
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.pdb
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\bin\Debug\CashBurst.xml
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\bin\Debug\InstantRiches.xml
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\bin\Debug\Progressive Meter Reader.exe
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\bin\Debug\Progressive Meter Reader.pdb
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.csprojResolveAssemblyReference.cache
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.details.resources
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.main.resources
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.Properties.Resources.resources
+C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.csproj.GenerateResource.Cache
