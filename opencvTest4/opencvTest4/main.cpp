@@ -310,9 +310,11 @@ int main( int argc, char *argv[] )
 		cout << "Classifying templates for J" << currJID << endl;
 		for(int i=0; i < charsToClassify; i++)
 		{
+			if(dbgStts) cout << "\nhere-aa\n";
 			char charASCII=0;
+			if(dbgStts) cout << "\nhere-ab\n";
 			string font = insValIntoStr( origFontStr, currJID, "/" );
-			if(dbgStts) cout << "\nhere-a\n";
+			if(dbgStts) cout << "\nhere-ac\n";
 			string trainPath = chooseFontSizeChar(font, i, charASCII);
 			if(dbgStts) cout << "\nhere-b\n";
 			train(toDbgFile, jValRgns, gameChoice, currJID, trainPath, 

@@ -1,11 +1,30 @@
-﻿Build started 5/18/2014 3:10:12 PM.
-     1>Project "E:\Git\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\opencvTest4\opencvTest4\opencvTest4.vcxproj" on node 2 (Build target(s)).
+﻿Build started 5/21/2014 4:59:16 PM.
+     1>Project "C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\opencvTest4\opencvTest4\opencvTest4.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         E:\Utilities\VC\bin\CL.exe /c /IC:\opencv\build\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\opencv\build\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>e:\git\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(26): fatal error C1083: Cannot open include file: 'opencv2/core/core.hpp': No such file or directory
-     1>Done Building Project "E:\Git\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\opencvTest4\opencvTest4\opencvTest4.vcxproj" (Build target(s)) -- FAILED.
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(68): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(278): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(281): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(535): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(540): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(590): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(591): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(592): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(593): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(594): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(601): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(602): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(883): warning C4305: '=' : truncation from 'int' to 'float'
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(929): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(1068): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(1186): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\andrey\documents\github\progressive-meter-reader\pmr\progressive meter reader\bin\debug\opencvtest4\opencvtest4\main.cpp(1233): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\opencvTest4\Debug\opencvTest4.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\opencv\build\x86\vc10\lib opencv_core248d.lib opencv_imgproc248d.lib opencv_highgui248d.lib opencv_ml248d.lib opencv_video248d.lib opencv_features2d248d.lib opencv_calib3d248d.lib opencv_objdetect248d.lib opencv_contrib248d.lib opencv_legacy248d.lib opencv_flann248d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\opencvTest4\Debug\opencvTest4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\opencvTest4\Debug\opencvTest4.lib" /MACHINE:X86 Debug\main.obj
+         opencvTest4.vcxproj -> C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\opencvTest4\Debug\opencvTest4.exe
+     1>Done Building Project "C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\opencvTest4\opencvTest4\opencvTest4.vcxproj" (Rebuild target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.77
+Time Elapsed 00:00:01.71

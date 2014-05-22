@@ -49,7 +49,7 @@ const bool	// smoothening flag:
 			// write images to src folder for debugging purposes:
 			writeImgs = 1,
 			// debugging statements:
-			dbgStts = 0,
+			dbgStts = 1,
 			// demoMode - cashburst by default:
 			demoMode = 1,
 			// enables formatting value as currency (rejected):
@@ -152,7 +152,6 @@ int main( int argc, char *argv[] )
 		cout << "\n\nPlease enter a proper set of arguments\n\n";
 		return -1;
 	}
-
 	cout << "\nInitializing/declaring core variables\n";
 
 	ROIINFO jValRgns[numJVals]; // assuming 5 jackpot values per game
@@ -177,20 +176,20 @@ int main( int argc, char *argv[] )
 	float fDatabase [numFeatureMoments][charsToClassify]; // moments database
 	ifstream fromInputFile;
 	ofstream toDbgFile;
-	toDbgFile.open("/opencvTest4/src/DebugOut.txt");
+	toDbgFile.open("opencvTest4/src/DebugOut.txt");
 	ofstream toUsrOutFile;
 	string jValStr = "";
-	string origFontStr = "/opencvTest4/src/inputImages/";
+	string origFontStr = "opencvTest4/src/inputImages/";
 	string imgName = "", imgNameWext = "", txtNameWext = "";
 	
 	imgName = argv[1];
 
 	cout << endl << endl;
-	//imgNameWext = insStrIntoStr( "../src/inputImages/" , imgName , ".jpg");
-	imgNameWext = insStrIntoStr( "/opencvTest4/src/inputImages/" , imgName , ".jpg");
+	imgNameWext = insStrIntoStr( "opencvTest4/src/inputImages/" , imgName , ".jpg");
+	cout << "\n >>>>>>>>>>>>>>>>>>>> " << imgNameWext << " \n";
 	imgTestColor = imread( imgNameWext , 1);
 	cout << endl << endl << imgNameWext << endl << endl;
-	txtNameWext = insStrIntoStr( "/opencvTest4/src/" , imgName , ".txt");
+	txtNameWext = insStrIntoStr( "opencvTest4/src/" , imgName , ".txt");
 	toUsrOutFile.open( txtNameWext );
 	toUsrOutFile << "Region Name|Meter Value\n";
 	
@@ -204,24 +203,25 @@ int main( int argc, char *argv[] )
 	else if (gameChoice == 1) 
 	{
 		currThreshVal = 50; // in case of global thresholding
-		fromInputFile.open("/opencvTest4/src/inputData/CB.txt");
-		origFontStr = "/opencvTest4/src/trainCashburstJ";
+		fromInputFile.open("opencvTest4/src/inputData/CB.txt");
+		origFontStr = "opencvTest4/src/trainCashburstJ";
 	}
 
 	// ==========================  INSTANT RICHES (LED-style font) - 1st jackpot value:  ==============================
 	else if (gameChoice == 2) 
 	{
 		currThreshVal = 40; // in case of global thresholding
-		fromInputFile.open("/opencvTest4/src/inputData/IR.txt");
-		origFontStr = "/opencvTest4/src/trainInstRichJ";
+		fromInputFile.open("opencvTest4/src/inputData/IR.txt");
+		origFontStr = "opencvTest4/src/trainInstRichJ";
 	}
 
 	else return 0; // incorrect game choice (game does not exist).
 
 	// =====================================  TESTING - GREYSCALE  ======================================
 
+	cout << "\n >>>>>>>>>>>>>>>>>>>> " << imgNameWext << " \n";
 	cvtColor(imgTestColor, imgTestGrey, COLOR_BGR2GRAY ); // greyscale: one color space to another	
-	if(writeImgs) imwrite( "/opencvTest4/src/stgImgs/outA-greyscale.png" , imgTestGrey);
+	if(writeImgs) imwrite( "opencvTest4/src/stgImgs/outA-greyscale.png" , imgTestGrey);
 
 	imgTestColor.copyTo(imgTestColorBin);
 	imgTestColor.copyTo(imgTestColorBinCont);
@@ -253,14 +253,14 @@ int main( int argc, char *argv[] )
 		// store the grey ROI in the source folder:
 		if(writeImgs)
 		{
-			s = insValIntoStr( "/opencvTest4/src/stgImgs/outB-imgRoiGrey-J" , currJID, ".png");
+			s = insValIntoStr( "opencvTest4/src/stgImgs/outB-imgRoiGrey-J" , currJID, ".png");
 			imwrite( s , imgRoiGrey );
 		}
 
 		if( enGauss )
 		{
 			GaussianBlur( imgRoiGrey, imgRoiGrey, Size(3,3), gaussSigma);
-			s = insValIntoStr( "/opencvTest4/src/stgImgs/outB-imgRoiGrey-J" , currJID, ".png");
+			s = insValIntoStr( "opencvTest4/src/stgImgs/outB-imgRoiGrey-J" , currJID, ".png");
 			if(writeImgs) imwrite( s , imgRoiGrey); // saves the chosen output image
 		}
 
@@ -281,7 +281,7 @@ int main( int argc, char *argv[] )
 		else currThreshVal = threshold(imgRoiGrey, imgRoiBin, currThreshVal, 255, THRESH_BINARY );
 
 		// store the binary ROI in the source folder:
-		s = insValIntoStr( "/opencvTest4/src/stgImgs/outC-imgRoiBin-J" , currJID, ".png");
+		s = insValIntoStr( "opencvTest4/src/stgImgs/outC-imgRoiBin-J" , currJID, ".png");
 		if(writeImgs) imwrite( s , imgRoiBin );
 
 		// Two ways to get rid of noise: dilation/erosion or custom noise reduction:
@@ -297,22 +297,24 @@ int main( int argc, char *argv[] )
 		{
 			imgRoiBin = reduceImgNoise(imgRoiBin);
 			// store the noise-less binary ROI in the source folder:
-			s = insValIntoStr( "/opencvTest4/src/stgImgs/outD-imgNoiseRdxn-J" , currJID, ".png");
+			s = insValIntoStr( "opencvTest4/src/stgImgs/outD-imgNoiseRdxn-J" , currJID, ".png");
 			if(writeImgs) imwrite( s , imgRoiBin );
 		}
 
 
 		attachROI(imgTestColorBin, currJID, imgRoiBin, jValRgns);
-		if(writeImgs) imwrite( "/opencvTest4/src/stgImgs/outZ-testColorROIs.png" , imgTestColorBin);
+		if(writeImgs) imwrite( "opencvTest4/src/stgImgs/outZ-testColorROIs.png" , imgTestColorBin);
 
 		// ========= go thru every char to classify =========
 		toDbgFile << endl << endl << endl;
 		cout << "Classifying templates for J" << currJID << endl;
 		for(int i=0; i < charsToClassify; i++)
 		{
+			if(dbgStts) cout << "\nhere-ab\n";
 			char charASCII=0;
+			if(dbgStts) cout << "\nhere-ac\n";
 			string font = insValIntoStr( origFontStr, currJID, "/" );
-			if(dbgStts) cout << "\nhere-a\n";
+			if(dbgStts) cout << "\nhere-ad\n";
 			string trainPath = chooseFontSizeChar(font, i, charASCII);
 			if(dbgStts) cout << "\nhere-b\n";
 			train(toDbgFile, jValRgns, gameChoice, currJID, trainPath, 
@@ -335,7 +337,7 @@ int main( int argc, char *argv[] )
 		}
 
 		attachROI(imgTestColorBinCont, currJID, imgWithContours, jValRgns);
-		if(writeImgs) imwrite( "/opencvTest4/src/stgImgs/outZ-testColorROIs-Cont.png" , imgTestColorBinCont);
+		if(writeImgs) imwrite( "opencvTest4/src/stgImgs/outZ-testColorROIs-Cont.png" , imgTestColorBinCont);
 
 		cout << "\nRecognized text for J" << currJID << ": ";
 		toDbgFile << "\nRecognized text for J" << currJID << ": ";
@@ -372,6 +374,7 @@ void train(ofstream & toDbgFile, ROIINFO jValRgns [] , int gameChoice,
 	// ===============================================================================
 	IMGPOINT * arrPts; // for dynamic allocation
 	Mat imgTmpltColor = imread(tmpltPath, 1);
+	if(dbgStts) cout << "\n >>>>>>>>>>>>>>>>>>>> " << tmpltPath << " \n";
 	Mat imgTmpltGray;
 	Mat imgTmpltBin;
 	Mat imgTmpltSmth;
@@ -379,29 +382,31 @@ void train(ofstream & toDbgFile, ROIINFO jValRgns [] , int gameChoice,
 	vector< vector<int> > imgPxlsFlags (imgTmpltColor.size().height, vector<int>(imgTmpltColor.size().width));
 	clearFlags(imgPxlsFlags, imgTmpltColor); // clear after allocation
 	// ===============================================================================
-
+	
+	if(dbgStts) cout << "\nhere-ca\n";
 	//! converts image from one color space to another
 	cvtColor(imgTmpltColor, imgTmpltGray, COLOR_BGR2GRAY );
+	if(dbgStts) cout << "\nhere-cb\n";
 	
 	if( enGauss )
 	{
 		GaussianBlur( imgTmpltGray, imgTmpltGray, Size(3,3), gaussSigma);
-		if(writeImgs) imwrite( "/opencvTest4/src/stgImgs/outB-greyGauss.png" , imgTmpltGray); // saves the chosen output image
+		if(writeImgs) imwrite( "opencvTest4/src/stgImgs/outB-greyGauss.png" , imgTmpltGray); // saves the chosen output image
 	}
 	
 	if(dbgStts) cout << "\nhere-d\n";
 
 	// uses Otsu's threshold value from the ROI (for consistency; same font/size - one threshold):
 	threshold(imgTmpltGray, imgTmpltBin, currThreshVal, 255, THRESH_BINARY);
-	if(writeImgs) imwrite( "/opencvTest4/src/stgImgs/outC-imgTmpltBin.png", imgTmpltBin);
+	if(writeImgs) imwrite( "opencvTest4/src/stgImgs/outC-imgTmpltBin.png", imgTmpltBin);
 
 	if( gameChoice == 2 ) // reserved for instant riches
 	{
 		// template:
 		dilate(imgTmpltBin, imgTmpltBin, Mat(), Point(-1,-1), jValRgns[currJID].numDilErds ); 
-		//if(writeImgs) imwrite( "C:/Users/Andrey/Documents/Visual Studio 2012/Projects/opencvTest4/src/stgImgs/wTrain-imgDbg.png", imgTmpltBin);
+		//if(writeImgs) imwrite( "opencvTest4/src/stgImgs/wTrain-imgDbg.png", imgTmpltBin);
 		erode(imgTmpltBin, imgTmpltBin, Mat(), Point(-1,-1), jValRgns[currJID].numDilErds );
-		//if(writeImgs) imwrite( "C:/Users/Andrey/Documents/Visual Studio 2012/Projects/opencvTest4/src/stgImgs/xTrain-imgDbg.png", imgTmpltBin);
+		//if(writeImgs) imwrite( "opencvTest4/src/stgImgs/xTrain-imgDbg.png", imgTmpltBin);
 	}
 
 	// custom noise reduction:
@@ -411,7 +416,7 @@ void train(ofstream & toDbgFile, ROIINFO jValRgns [] , int gameChoice,
 
 	// ======= time to find the 4 moments for the char: =======
 	// pre-compute no_points(size)(N):
-	//if(writeImgs) imwrite( "C:/Users/Andrey/Documents/Visual Studio 2012/Projects/opencvTest4/src/stgImgs/zTrain-imgDbg.png", imgTmpltBin);
+	//if(writeImgs) imwrite( "opencvTest4/src/stgImgs/zTrain-imgDbg.png", imgTmpltBin);
 	int numPts = countContPts(imgTmpltBin, imgPxlsFlags, 0, rightOfChar, endOfRgn); // might encounter inf-loop
 	toDbgFile << "Num of points: " << numPts << endl; 
 	clearFlags(imgPxlsFlags, imgTmpltColor); // clear after allocation
@@ -425,8 +430,6 @@ void train(ofstream & toDbgFile, ROIINFO jValRgns [] , int gameChoice,
 	if(enSmth)
 	{
 		smoothen(imgTmpltBin, arrPts, numPts);
-		//string s = insValIntoStr( "C:/Users/Andrey/Documents/Visual Studio 2012/Projects/opencvTest4/src/stgImgs/outHist-J" , currJID, ".png");
-		//if(writeImgs) imwrite( s , outImg);
 	}
 
 	// Needs:
@@ -695,7 +698,7 @@ int countContPts(Mat imgDtct, vector< vector<int> > & imgPxlsFlags,
 
 	// image processing debugging:
 	//threshold(imgDtct, imgDbg, currThreshVal, 255, THRESH_BINARY);
-	//if(writeImgs) imwrite( "../src/stgImgs/out-imgDbg.png" , imgDbg);
+	//if(writeImgs) imwrite( ".src/stgImgs/out-imgDbg.png" , imgDbg);
 
 	// go around 1 time (use the start/finish pixel)
 	// and count contour pixels:
@@ -886,7 +889,7 @@ void dtctAndMatch(ofstream & toDbgFile, int currJID, Mat imgDtct,
 
 	// ======= time to find the moments for the char: =======
 	// pre-compute no_points(size)(N):
-	//if(writeImgs) imwrite( "../src/stgImgs/z-imgDbg.png", imgDtct);
+	//if(writeImgs) imwrite( ".src/stgImgs/z-imgDbg.png", imgDtct);
 	int numPts = countContPts(imgDtct, imgPxlsFlags, 1, rightOfChar, endOfRgn);
 	toDbgFile << "Num of points: " << numPts << endl; 
 
@@ -903,7 +906,7 @@ void dtctAndMatch(ofstream & toDbgFile, int currJID, Mat imgDtct,
 	if(enSmth)
 	{
 		smoothen(imgDtct, arrPts, numPts);
-		string s = insValIntoStr( "/opencvTest4/src/stgImgs/outSmth-" , currJID, ".png");
+		string s = insValIntoStr( "opencvTest4/src/stgImgs/outSmth-" , currJID, ".png");
 		Mat outImg;
 		if(writeImgs) imwrite( s , outImg);
 	}
@@ -1194,7 +1197,7 @@ void drawHistogram(int currJID, Mat imageGray)
 		imgDummy.ptr(d)[ imgDummy.size().width*currThreshVal/255 ] = 128;
 
 	// 3) Write:
-	string s = insValIntoStr( "/opencvTest4/src/stgImgs/outHist-J" , currJID, ".png");
+	string s = insValIntoStr( "opencvTest4/src/stgImgs/outHist-J" , currJID, ".png");
 	if(writeImgs) imwrite( s , imgDummy);
 
 	return;
@@ -1249,9 +1252,11 @@ Mat reduceImgNoise(Mat imgRough)
 
 string insValIntoStr( string leftEnd, int currJID, string rightEnd )
 {
+	if(dbgStts) cout << "\nUsing insValIntoStr()\n";
 	string wholeStr = leftEnd;
 	wholeStr.append( to_string(currJID) );
 	wholeStr.append( rightEnd );
+	if(dbgStts) cout << "\ninsValIntoStr() finished\n";
 
 	return wholeStr;
 }

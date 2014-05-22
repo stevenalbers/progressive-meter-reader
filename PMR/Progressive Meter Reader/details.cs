@@ -243,7 +243,7 @@ namespace Progressive_Meter_Reader
 
             // NICK NICK NICK NICK NICK NICK NICK NICK NICK NICK
             // Drop your executable here =]
-            startInfo.FileName = @"\src\inputImages\server.exe";
+            startInfo.FileName = @"server.exe";
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.Arguments = outputfile;
 
@@ -273,7 +273,10 @@ namespace Progressive_Meter_Reader
 
             // ANDREY ANDREY ANDREY ANDREY ANDREY ANDREY
             // Drop your executable here =]
-            startInfo.FileName = @"\opencvTest4.exe";
+            //startInfo.FileName = @"C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\opencvTest4\Debug\opencvTest4.exe";
+            startInfo.FileName = @"opencvTest4\Debug\opencvTest4.exe";
+            //startInfo.FileName = @"opencvTest4.exe";
+
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
 
             // This is where the arguments go
@@ -334,6 +337,11 @@ namespace Progressive_Meter_Reader
 
             // win!
             Refresh();
+        }
+
+        private void details_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

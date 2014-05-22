@@ -22,3 +22,15 @@ C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter
 C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.main.resources
 C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.Properties.Resources.resources
 C:\Users\Steven\Dropbox\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.csproj.GenerateResource.Cache
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\Progressive Meter Reader.exe.config
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.exe
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.pdb
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\CashBurst.xml
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\InstantRiches.xml
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\Progressive Meter Reader.exe
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\bin\Debug\Progressive Meter Reader.pdb
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.details.resources
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.main.resources
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\obj\Debug\Progressive_Meter_Reader.Properties.Resources.resources
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.csproj.GenerateResource.Cache
+C:\Users\Andrey\Documents\GitHub\progressive-meter-reader\PMR\Progressive Meter Reader\obj\Debug\Progressive Meter Reader.csprojResolveAssemblyReference.cache

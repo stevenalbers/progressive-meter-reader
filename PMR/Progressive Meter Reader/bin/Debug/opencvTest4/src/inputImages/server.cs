@@ -21,11 +21,13 @@ try
 				fileName = args[0];
 			
 			string fileType = ".jpg";
-			string fullName = fileName + fileType;
+			string path = @"opencvTest4\src\inputImages\";
+			string fullName = path + fileName + fileType;
+
 
 			Socket s = null;
 			s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-			s.Connect(new IPEndPoint(IPAddress.Parse("192.168.100.100"), 9988));
+			s.Connect(new IPEndPoint(IPAddress.Parse("192.168.100.103"), 9988));
 
 			Socket client = s;
 			Image img = Image.FromStream(new NetworkStream(client));
